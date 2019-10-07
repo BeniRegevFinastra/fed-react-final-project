@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Israeli"
+    },
+    {
+        "id": 2,
+        "name": "Japanese"
+    },
+    {
+        "id": 3,
+        "name": "Chinese"
+    },
+    {
+        "id": 5,
+        "name": "Italian"
+    },
+    {
+        "id": 6,
+        "name": "East European"
+    },
+    {
+        "id": 8,
+        "name": "Mexican"
+    },
+    {
+        "id": 10,
+        "name": "Marrocan"
+    },
+    {
+        "id": 12,
+        "name": "Yemani"
+    },
+    {
+        "id": 13,
+        "name": "Perual"
+    },
+    {
+        "id": 14,
+        "name": "American"
+    }
+]

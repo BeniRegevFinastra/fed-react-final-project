@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "name": "appetizer"
+    },
+    {
+        "id": 2,
+        "name": "First Course"
+    },
+    {
+        "id": 3,
+        "name": "Soup"
+    },
+    {
+        "id": 4,
+        "name": "Main Course"
+    },
+    {
+        "id": 5,
+        "name": "Dessert"
+    },
+    {
+        "id": 6,
+        "name": "Garnish"
+    },
+    {
+        "id": 7,
+        "name": "Salad"
+    },
+    {
+        "id": 8,
+        "name": "Sauce"
+    },
+    {
+        "id": 9,
+        "name": "Snack"
+    },
+    {
+        "id": 10,
+        "name": "Dery"
+    },
+    {
+        "id": 11,
+        "name": "Meat/Lamb"
+    },
+    {
+        "id": 12,
+        "name": "Chicken/Turkey"
+    },
+    {
+        "id": 13,
+        "name": "Fish"
+    },
+    {
+        "id": 14,
+        "name": "Vegeterian"
+    },
+    {
+        "id": 15,
+        "name": "Vigan Friendly"
+    },
+    {
+        "id": 16,
+        "name": "Sauce"
+    },
+    {
+        "id": 17,
+        "name": "Snack"
+    }
+]
