@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { Redirect } from 'react-router-dom'
 
-class MyRecipesNavbar extends React.Component {
+class RecipesNavbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,7 +15,7 @@ class MyRecipesNavbar extends React.Component {
     logout() {
         this.props.handleLogout();
 
-        if (window.location.hash != "#/") {
+        if (window.location.hash !== '#/') {
             this.setState({redirectToHome: true})
         }
     }
@@ -56,4 +56,4 @@ class MyRecipesNavbar extends React.Component {
     }
 }
 
-export default MyRecipesNavbar;
+export default RecipesNavbar;
