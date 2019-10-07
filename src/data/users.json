@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "fname": "Miri",
+        "lname": "Regev",
+        "email": "miri@regev.com",
+        "pwd": "1983"
+    },
+    {
+        "id": 2,
+        "fname": "Benny",
+        "lname": "Regev",
+        "email": "benny@regev.com",
+        "pwd": "1969"
+    },
+    {
+        "id": 1,
+        "fname": "Anya",
+        "lname": "Regev",
+        "email": "anya@regev.com",
+        "pwd": "2011"
+    },
+    {
+        "id": 4,
+        "fname": "John",
+        "lname": "Doe",
+        "email": "john@john.com",
+        "pwd": "123"
+    }
+]
