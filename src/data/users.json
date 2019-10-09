@@ -4,27 +4,31 @@
         "fname": "Miri",
         "lname": "Regev",
         "email": "miri@regev.com",
-        "pwd": "1983"
+        "pwd": "1983",
+        "role": "user"
     },
     {
         "id": 2,
         "fname": "Benny",
         "lname": "Regev",
         "email": "benny@regev.com",
-        "pwd": "1969"
+        "pwd": "1969",
+        "role": "admin"
     },
     {
         "id": 1,
         "fname": "Anya",
         "lname": "Regev",
         "email": "anya@regev.com",
-        "pwd": "2011"
+        "pwd": "2011",
+        "role": "user"
     },
     {
         "id": 4,
         "fname": "John",
         "lname": "Doe",
         "email": "john@john.com",
-        "pwd": "123"
+        "pwd": "123",
+        "role": "user"
     }
 ]

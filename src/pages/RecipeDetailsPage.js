@@ -5,8 +5,15 @@ import RecipesNavbar from '../components/RecipesNavbar';
 class RecipeDetailsPage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            recipe: null,
+        }
     }
+
+    componentDidMount() {
+        console.log("RecipeDetailsPage.componentDidMount()");
+    }
+
     render() {
         const { activeUser, handleLogout } = this.props;
 

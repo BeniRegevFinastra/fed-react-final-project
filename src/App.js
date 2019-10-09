@@ -10,7 +10,8 @@ import PlannedDinnerPage from './pages/PlannedDinnerPage';
 import ShoppingListPage from './pages/ShoppingListPage';
 import jsonUsers from './data/users'
 import jsonRecipes from './data/recipes'
-
+import jsonDishTypes from './data/DishTypes'
+import jsonKitchens from './data/Kitchens'
 
 class App extends React.Component {
 
@@ -27,6 +28,8 @@ class App extends React.Component {
     // },
       allUsers: jsonUsers,
       allRecipes: jsonRecipes,
+      allDishTypes: jsonDishTypes,
+      allKitchens: jsonKitchens,
       activeUserRecipes: []
       // hack for starting with my recipes
       // activeUserRecipes: jsonRecipes.filter(recipe => recipe.userId === 1)
@@ -74,7 +77,7 @@ class App extends React.Component {
         <Route path="/login">
           <LoginPage users={allUsers} handleLogin={this.handleLogin}/>
         </Route>
-        <Route path="/recipes">
+        <Route exact path="/recipes">
           <RecipesPage recipes={activeUserRecipes} activeUser={activeUser} handleLogout={this.handleLogout} addRecipe={this.addRecipe}/>
         </Route>
         <Route path="/recipedetails/:id">

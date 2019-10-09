@@ -4,6 +4,8 @@
         "name": "Shakshuka #1",
         "desc": "Eggs dish with tomato",
         "img": "https://downshiftology.com/wp-content/uploads/2015/11/shakshuka-12.jpg",
+        "duration": 15,
+        "type": "Eggs",
         "userId": 1
     },
     {
@@ -11,6 +13,8 @@
         "name": "Greek Salad #1",
         "desc": "Tomato and olives and cheese",
         "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/4/23/0/BX0204_greek-salad_s4x3.jpg.rend.hgtvcom.616.462.suffix/1529943050536.jpeg",
+        "duration": 10,
+        "type": "Vegeterian",
         "userId": 1
     },
     {
@@ -18,6 +22,8 @@
         "name": "Shakshuka #2",
         "desc": "Eggs dish with tomato",
         "img": "https://downshiftology.com/wp-content/uploads/2015/11/shakshuka-12.jpg",
+        "duration": 15,
+        "type": "Eggs",
         "userId": 2
     },
     {
@@ -25,34 +31,71 @@
         "name": "Greek Salad #2",
         "desc": "Tomato and olives and cheese",
         "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/4/23/0/BX0204_greek-salad_s4x3.jpg.rend.hgtvcom.616.462.suffix/1529943050536.jpeg",
+        "duration": 10,
+        "type": "Vegeterian",
         "userId": 2
     },
     {
-        "id": 1,
+        "id": 5,
+        "name": "Shuba Salad",
+        "desc": "Herring Under Fur Coat",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Selidi_pod_shuboi.jpg/1024px-Selidi_pod_shuboi.jpg",
+        "duration": 90,
+        "type": "Fish",
+        "userId": 2
+    },
+    {
+        "id": 6,
         "name": "Shakshuka #3",
         "desc": "Eggs dish with tomato",
         "img": "https://downshiftology.com/wp-content/uploads/2015/11/shakshuka-12.jpg",
+        "duration": 15,
+        "type": "Eggs",
         "userId": 3
     },
     {
-        "id": 2,
+        "id": 7,
         "name": "Greek Salad #3",
         "desc": "Tomato and olives and cheese",
         "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/4/23/0/BX0204_greek-salad_s4x3.jpg.rend.hgtvcom.616.462.suffix/1529943050536.jpeg",
+        "duration": 10,
+        "type": "Vegeterian",
         "userId": 3
     },
     {
-        "id": 3,
+        "id": 8,
         "name": "Shakshuka #4",
         "desc": "Eggs dish with tomato",
         "img": "https://downshiftology.com/wp-content/uploads/2015/11/shakshuka-12.jpg",
+        "duration": 15,
+        "type": "Eggs",
         "userId": 4
     },
     {
-        "id": 4,
+        "id": 9,
         "name": "Greek Salad #4",
         "desc": "Tomato and olives and cheese",
         "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/4/23/0/BX0204_greek-salad_s4x3.jpg.rend.hgtvcom.616.462.suffix/1529943050536.jpeg",
+        "duration": 10,
+        "type": "Vegeterian",
         "userId": 4
+    },
+    {
+        "id": 10,
+        "name": "Falafel",
+        "desc": "Vigan Friendly",
+        "img": "https://toriavey.com/images/2011/01/Falafel-10-640x480.jpg",
+        "duration": 30,
+        "type": "Vigan Friendly",
+        "userId": 2
+    },
+    {
+        "id": 11,
+        "name": "Chimichuri",
+        "desc": "Vigan Friendly",
+        "img": "https://alchetron.com/cdn/chimichurri-9d156011-02dc-4f95-93ac-a217b147dee-resize-750.jpg",
+        "duration": 30,
+        "type": "Vigan Friendly",
+        "userId": 2
     }
 ]
