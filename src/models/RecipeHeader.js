@@ -27,7 +27,12 @@ class RecipeHeader {
         }
     }
     toString() {
-        return("{ T.B.D. }");
+        return ("{ \"id\": " + this.id +
+            ", \"name\": \"" + this.name +
+            "\", \"desc\": \"" + this.desc +
+            "\", \"img\": \"" + this.img +
+            "\", \"duration\": " + this.duration +
+            ", \"type\": \"" + this.type + "\" }");
     }
 
 }
