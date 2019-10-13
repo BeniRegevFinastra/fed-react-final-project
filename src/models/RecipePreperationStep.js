@@ -9,12 +9,19 @@ class RecipePreperationStep {
         if (arguments.length === 1) {
             //  First and only argument is an object
             this.recipeId = descriptionOrObj.recipeId;
-            this.stepNum = descriptionOrObj.stepNum;
+            this.stepNumber = descriptionOrObj.stepNumber;
             this.description = descriptionOrObj.description;
         } else {
             this.recipeId = recipeId;
-            this.stepNum = stepNum;
+            this.stepNumber = stepNumber;
             this.description = descriptionOrObj;
         }
+    }
+    
+    toString() {
+        return ("{ \"recipeId\": " + this.recipeId +
+            ", \"stepNumber\": " + this.stepNumber +
+            ", \"description\": \"" + this.description + 
+            "\" }");
     }
 }
