@@ -5,7 +5,8 @@
  */
 class Recipe {
     constructor(recipeHeaderOrObj, recipeIndredients, recipePreperationSteps) {
-        if (argument === 1 ) {
+        if (arguments.length === 1 ) {
+            //  First and only argument is an object
             this.recipeHeader = recipeHeaderOrObj.recipeHeader; 
             this.recipeIndredients = recipeHeaderOrObj.recipeIndredients;
             this.recipePreperationSteps = recipeHeaderOrObj.recipePreperationSteps;

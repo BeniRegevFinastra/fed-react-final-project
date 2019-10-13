@@ -1,7 +1,6 @@
 {
     "recipes": [
         {
-            // RecipeId=1 ==> Shakshuka
             "recipeId": 1,
             "ingredients": [
                 {
@@ -71,7 +70,6 @@
             ]
         },
         {
-            // recipeId = 2 ==> Greek Salad
             "recipeId": 2,
             "ingredients": [
                 {
@@ -119,7 +117,6 @@
             ]
         },
         {
-            // recipeId = 3 ==> Shuba Salad
             "recipeId": 3,
             "ingredients": [
                 {
@@ -167,7 +164,6 @@
             ]
         },
         {
-            // recipeId = 4 ==> Falafel
             "recipeId": 4,
             "ingredients": [
                 {

@@ -10,7 +10,8 @@
 */
 class RecipeHeader {
     constructor(nameOrObj, id, desc, img, duration, type) {
-        if (arguments === 1) {
+        if (arguments.length === 1) {
+            //  First and only argument is an object
             this.id = nameOrObj.id;
             this.name = nameOrObj.name;
             this.desc = nameOrObj.desc;

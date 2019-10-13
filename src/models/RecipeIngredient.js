@@ -9,7 +9,8 @@
 */
 class RecipeIngredient {
     constructor(nameOrObj, recipeId, ingredientId, index, units, quantity) {
-        if (arguments === 1) {
+        if (arguments.length === 1) {
+            //  First and only argument is an object
             this.recipeId = nameOrObj.recipeId;
             this.ingredientId = nameOrObj.ingredientId;
             this.name = nameOrObj.name;
@@ -26,6 +27,12 @@ class RecipeIngredient {
         }
     }
     toString() {
-        return("{ T.B.D. }");
+        return ("{ \"recipeId\": " + this.recipeId +
+            ", \"ingredientId\": " + this.ingredientId +
+            ", \"index\": " + this.index +
+            ", \"name\": \"" + this.name +
+            "\", \"units\": " + this.units +
+            "\", \"quantity\": " + this.quantity +
+            " ] }");
     }
 }
