@@ -8,12 +8,12 @@ import RecipesPage from './pages/RecipesPage';
 import RecipeDetailsPage from './pages/RecipeDetailsPage';
 import PlannedDinnerPage from './pages/PlannedDinnerPage';
 import ShoppingListPage from './pages/ShoppingListPage';
-import jsonUsers from './data/users';
-import jsonKitchens from './data/Kitchens';
-import jsonDishTypes from './data/DishTypes';
-import jsonIngredients from './data/Ingredient';
-import jsonRecipes from './data/Recipes';
-import jsonRecipeIngredients from './data/RecipeIngrediaent';
+import jsonUsers from './data/users'
+import jsonKitchens from './data/Kitchens'
+import jsonDishTypes from './data/DishTypes'
+import jsonIngredients from './data/Ingredient'
+import jsonRecipes from './data/recipes'
+import jsonRecipeIngredients from './data/RecipeIngrediaent'
 import jsonRecipesPreperationSteps from './data/RecipePreperationStep'
 
 class App extends React.Component {
@@ -21,6 +21,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      recipeId: null,
       activeUser: null,
       //   activeUser:   {
       //     "id": 1,
@@ -73,7 +74,7 @@ class App extends React.Component {
   render() {
 
     // const activeUser = this.state.activeUser;
-    const { activeUser, allUsers,
+    const { recipeId, activeUser, allUsers,
       allRecipes,
       allKitchens,
       allDishTypes,
@@ -81,9 +82,13 @@ class App extends React.Component {
       allRecipesIngredients,
       allRecipesPreperationSteps,
       activeUserRecipes } = this.state;
-
-      console.log("allKitchens: " + allKitchens);
-      console.log("allDishTypes: " + allDishTypes);
+    
+    console.log("allRecipes: " + allRecipes);
+    console.log("allKitchens: " + allKitchens);
+    console.log("allDishTypes: " + allDishTypes);
+    console.log("allIngredients: " + allIngredients);
+    console.log("allRecipesIngredients: " + allRecipesIngredients);
+    console.log("allRecipesPreperationSteps: " + allRecipesPreperationSteps);
 
     return (
       <Switch>
@@ -94,16 +99,16 @@ class App extends React.Component {
           <LoginPage users={allUsers} handleLogin={this.handleLogin} />
         </Route>
         <Route exact path="/recipes">
-          <RecipesPage recipes={activeUserRecipes} activeUser={activeUser} handleLogout={this.handleLogout} addRecipe={this.addRecipe} />
+          <RecipesPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} />
         </Route>
         <Route path="/recipes/:id">
-          <RecipeDetailsPage recipes={activeUserRecipes} activeUser={activeUser} handleLogout={this.handleLogout} addRecipe={this.addRecipe} />
+          <RecipeDetailsPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} />
         </Route>
         <Route path="/dinner">
-          <PlannedDinnerPage recipes={activeUserRecipes} activeUser={activeUser} handleLogout={this.handleLogout} addRecipe={this.addRecipe} />
+          <PlannedDinnerPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={activeUserRecipes} handleLogout={this.handleLogout} />
         </Route>
         <Route path="/shopping">
-          <ShoppingListPage recipes={activeUserRecipes} activeUser={activeUser} handleLogout={this.handleLogout} addRecipe={this.addRecipe} />
+          <ShoppingListPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} />
         </Route>
       </Switch>
     );
