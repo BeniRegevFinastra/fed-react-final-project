@@ -43,7 +43,7 @@ class RecipesPage extends React.Component {
     }
 
     render() {
-        const { activeUser, handleLogout, recipes } = this.props;
+        const { activeUser, handleLogout, allRecipes } = this.props;
         const { showModal } = this.state;
         //const showModal = this.state.showModal;
 
@@ -51,7 +51,11 @@ class RecipesPage extends React.Component {
             return <Redirect to="/" />
         }
 
-        const recipesCards = recipes.map(recipe => <Col key={recipe.id} lg="3" md="6"><RecipeCard recipe={recipe} /></Col>)
+        const recipesCards = allRecipes.map(recipe =>
+            <Col key={recipe.id} lg="3" md="6">
+                <RecipeCard recipe={recipe} />
+            </Col>
+        );
 
         return (
             <div>

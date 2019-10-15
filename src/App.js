@@ -101,9 +101,12 @@ class App extends React.Component {
         <Route exact path="/recipes">
           <RecipesPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} />
         </Route>
+        {/* 
         <Route path="/recipes/:id">
           <RecipeDetailsPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} />
-        </Route>
+        </Route> 
+        */}
+        <Route path="/recipes/:id" component={RecipeDetailsPage} activeUser={activeUser} allRecipes={allRecipes} />
         <Route path="/dinner">
           <PlannedDinnerPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={activeUserRecipes} handleLogout={this.handleLogout} />
         </Route>

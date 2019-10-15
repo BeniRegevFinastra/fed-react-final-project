@@ -5,6 +5,7 @@
         "desc": "Eggs dish with tomato",
         "img": "https://downshiftology.com/wp-content/uploads/2015/11/shakshuka-12.jpg",
         "duration": 15,
+        "difficultyLevel": 2,
         "type": "Eggs",
         "userId": 1
     },
@@ -14,6 +15,7 @@
         "desc": "Tomato and olives and cheese",
         "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/4/23/0/BX0204_greek-salad_s4x3.jpg.rend.hgtvcom.616.462.suffix/1529943050536.jpeg",
         "duration": 10,
+        "difficultyLevel": 1,
         "type": "Vegeterian",
         "userId": 1
     },
@@ -23,6 +25,7 @@
         "desc": "Eggs dish with tomato",
         "img": "https://downshiftology.com/wp-content/uploads/2015/11/shakshuka-12.jpg",
         "duration": 15,
+        "difficultyLevel": 2,
         "type": "Eggs",
         "userId": 2
     },
@@ -32,6 +35,7 @@
         "desc": "Tomato and olives and cheese",
         "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/4/23/0/BX0204_greek-salad_s4x3.jpg.rend.hgtvcom.616.462.suffix/1529943050536.jpeg",
         "duration": 10,
+        "difficultyLevel": 1,
         "type": "Vegeterian",
         "userId": 2
     },
@@ -41,6 +45,7 @@
         "desc": "Herring Under Fur Coat",
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Selidi_pod_shuboi.jpg/1024px-Selidi_pod_shuboi.jpg",
         "duration": 90,
+        "difficultyLevel": 2,
         "type": "Fish",
         "userId": 2
     },
@@ -50,6 +55,7 @@
         "desc": "Eggs dish with tomato",
         "img": "https://downshiftology.com/wp-content/uploads/2015/11/shakshuka-12.jpg",
         "duration": 15,
+        "difficultyLevel": 2,
         "type": "Eggs",
         "userId": 3
     },
@@ -59,6 +65,7 @@
         "desc": "Tomato and olives and cheese",
         "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/4/23/0/BX0204_greek-salad_s4x3.jpg.rend.hgtvcom.616.462.suffix/1529943050536.jpeg",
         "duration": 10,
+        "difficultyLevel": 1,
         "type": "Vegeterian",
         "userId": 3
     },
@@ -68,6 +75,7 @@
         "desc": "Eggs dish with tomato",
         "img": "https://downshiftology.com/wp-content/uploads/2015/11/shakshuka-12.jpg",
         "duration": 15,
+        "difficultyLevel": 2,
         "type": "Eggs",
         "userId": 4
     },
@@ -77,6 +85,7 @@
         "desc": "Tomato and olives and cheese",
         "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/4/23/0/BX0204_greek-salad_s4x3.jpg.rend.hgtvcom.616.462.suffix/1529943050536.jpeg",
         "duration": 10,
+        "difficultyLevel": 1,
         "type": "Vegeterian",
         "userId": 4
     },
@@ -86,6 +95,7 @@
         "desc": "Vigan Friendly",
         "img": "https://toriavey.com/images/2011/01/Falafel-10-640x480.jpg",
         "duration": 30,
+        "difficultyLevel": 2,
         "type": "Vigan Friendly",
         "userId": 2
     },
@@ -95,6 +105,7 @@
         "desc": "Vigan Friendly",
         "img": "https://alchetron.com/cdn/chimichurri-9d156011-02dc-4f95-93ac-a217b147dee-resize-750.jpg",
         "duration": 30,
+        "difficultyLevel": 1,
         "type": "Vigan Friendly",
         "userId": 2
     }
