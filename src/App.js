@@ -8,58 +8,34 @@ import RecipesPage from "./pages/RecipesPage";
 import RecipeDetailsPage from "./pages/RecipeDetailsPage";
 import PlannedDinnerPage from "./pages/PlannedDinnerPage";
 import ShoppingListPage from "./pages/ShoppingListPage";
-import jsonUsers from "./data/users";
+// import jsonUsers from "./data/users";
 // import jsonKitchens from './data/Kitchens'
 // import jsonDishTypes from './data/DishTypes'
 // import jsonIngredients from './data/Ingredient'
 // import jsonRecipes from './data/recipes'
 // import jsonRecipeIngredients from './data/RecipeIngrediaent'
 // import jsonRecipesPreperationSteps from './data/RecipePreperationStep'
-import UserProvider from "./components/userContext";
+import { UserProvider } from "./components/userContext";
+import { AppContext } from "./components/AppContext";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      // recipeId: null,
-      // activeUser: null,
-      //  /*  activeUser: { */
-      //  /*    "id": 1, */
-      //  /*    "fname": "Benny", */
-      //  /*    "lname": "Regev", */
-      //  /*    "email": "benny@regev.com", */
-      //  /*    "pwd": "1969" */
-      //  /*  } */
-      allUsers: jsonUsers
-      // allKitchens: jsonKitchens,
-      // allDishTypes: jsonDishTypes,
-      // allIngredients: jsonIngredients,
-      // allRecipes: jsonRecipes,
-      // allRecipesIngredients: jsonRecipeIngredients,
-      // allRecipesPreperationSteps: jsonRecipesPreperationSteps,
-      // activeUserRecipes: []
-
-      // hack for starting with my recipes
-      // activeUserRecipes: jsonRecipes.filter(recipe => recipe.userId === 1)
-    };
-
-    this.handleLogout = this.handleLogout.bind(this);
-    this.handleLogin = this.handleLogin.bind(this);
+    // this.handleLogout = this.handleLogout.bind(this);
+    // this.handleLogin = this.handleLogin.bind(this);
     this.addRecipe = this.addRecipe.bind(this);
-
-    console.log(this.state.allRecipes);
   }
 
-  handleLogout() {
-    this.setState({ activeUser: null });
-  }
+  // handleLogout() {
+  //   this.setState({ activeUser: null });
+  // }
 
-  handleLogin(activeUser) {
-    const activeUserRecipes = this.state.allRecipes.filter(
-      recipe => recipe.userId === activeUser.id
-    );
-    this.setState({ activeUser, activeUserRecipes });
-  }
+  // handleLogin(activeUser) {
+  //   const activeUserRecipes = this.state.allRecipes.filter(
+  //     recipe => recipe.userId === activeUser.id
+  //   );
+  //   this.setState({ activeUser, activeUserRecipes });
+  // }
 
   addRecipe(newRecipe) {
     //const {activeUser, allRecipes, activeUserRecipes} this.state.activeUser
@@ -76,74 +52,38 @@ class App extends React.Component {
   }
 
   render() {
-    // const activeUser = this.state.activeUser;
-    // const { recipeId, activeUser, allUsers,
-    //   allRecipes,
-    //   allKitchens,
-    //   allDishTypes,
-    //   allIngredients,
-    //   allRecipesIngredients,
-    //   allRecipesPreperationSteps,
-    //   activeUserRecipes } = this.state;
-    const {
-      allUsers
-    } = this.state;
-
-    // console.log("allRecipes: " + allRecipes);
-    // console.log("allKitchens: " + allKitchens);
-    // console.log("allDishTypes: " + allDishTypes);
-    // console.log("allIngredients: " + allIngredients);
-    // console.log("allRecipesIngredients: " + allRecipesIngredients);
-    // console.log("allRecipesPreperationSteps: " + allRecipesPreperationSteps);
-
     return (
-      <Switch>
-        <Route exact path="/">
-          <HomePage activeUser={activeUser} handleLogout={this.handleLogout} />
-        </Route>
-        <Route path="/login">
-          <LoginPage users={allUsers} handleLogin={this.handleLogin} />
-        </Route>
-        <Route exact path="/recipes">
-          <UserProvider value={activeUser}>
-            <RecipesPage
-              activeUser={activeUser}
-              addRecipe={this.addRecipe}
-              allRecipes={allRecipes}
-              handleLogout={this.handleLogout}
-              userRecipes={activeUserRecipes}
+      <AppContext.Provider>
+        <Switch>
+          <Route exact path="/">
+            <HomePage
+            // activeUser={activeUser}
+            // handleLogout={this.handleLogout}
             />
-          </UserProvider>
-        </Route>
-        {/* 
-        <Route path="/recipes/:id">
-          <RecipeDetailsPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} />
-        </Route> 
-        */}
-        <Route
-          path="/recipes/:id"
-          component={RecipeDetailsPage}
-          activeUser={activeUser}
-          allRecipes={allRecipes}
-        />
-        <Route path="/dinner">
-          <PlannedDinnerPage
-            activeUser={activeUser}
-            addRecipe={this.addRecipe}
-            allRecipes={activeUserRecipes}
-            handleLogout={this.handleLogout}
-          />
-        </Route>
-        <Route path="/shopping">
-          <ShoppingListPage
-            activeUser={activeUser}
-            addRecipe={this.addRecipe}
-            allRecipes={allRecipes}
-            handleLogout={this.handleLogout}
-            userRecipes={activeUserRecipes}
-          />
-        </Route>
-      </Switch>
+          </Route>
+          <Route path="/login">
+            {/* <LoginPage users={allUsers} handleLogin={this.handleLogin} /> */}
+            <LoginPage />
+          </Route>
+          <Route exact path="/recipes">
+            {/* <RecipesPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} /> */}
+            <RecipesPage />
+          </Route>
+          {/* 
+            <Route path="/recipes/:id">
+              <RecipeDetailsPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} />
+            </Route> 
+          */}
+          {/* <Route path="/recipes/:id" component={RecipeDetailsPage} activeUser={activeUser} allRecipes={allRecipes} /> */}
+          <Route path="/recipes/:id" component={RecipeDetailsPage} />
+          <Route path="/dinner">
+            <PlannedDinnerPage />
+          </Route>
+          <Route path="/shopping">
+            <ShoppingListPage />
+          </Route>
+        </Switch>
+      </AppContext.Provider>
     );
   }
 }
