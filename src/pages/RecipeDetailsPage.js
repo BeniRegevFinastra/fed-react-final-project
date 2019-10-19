@@ -1,7 +1,8 @@
 import React from 'react'
 import { Jumbotron, Container, Row, Col, Table, ListGroup, ListGroupItem } from 'react-bootstrap'
 // import { Container, Row, Col, Table, ListGroup, ListGroupItem } from 'reactstrap';
-import RecipesNavbar from '../components/RecipesNavbar';
+import RecipesNavbar from '../components/RecipesNavbar'
+import UserConsumer from '../components/userContext'
 
 class RecipeDetailsPage extends React.Component {
     constructor(props) {
@@ -32,6 +33,13 @@ class RecipeDetailsPage extends React.Component {
             padding: '20px 10px 10px 10px'
         }
         return (
+            <UserConsumer>
+                {
+                    (username) => {
+                        return <div>Hello {username}</div>
+                    }
+                }
+            </UserConsumer>
             <div>
                 <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout} />
                 <Jumbotron>
