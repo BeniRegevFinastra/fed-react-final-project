@@ -33,6 +33,13 @@ class RecipeDetailsPage extends React.Component {
             padding: '20px 10px 10px 10px'
         }
         return (
+            <UserConsumer>
+                {
+                    (username) => {
+                        return <div>Hello {username}</div>
+                    }
+                }
+            </UserConsumer>
             <div>
                 <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout} />
                 <Jumbotron>
