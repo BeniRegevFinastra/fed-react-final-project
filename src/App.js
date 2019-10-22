@@ -9,28 +9,27 @@ import RecipeDetailsPage from './pages/RecipeDetailsPage';
 import PlannedDinnerPage from './pages/PlannedDinnerPage';
 import ShoppingListPage from './pages/ShoppingListPage';
 import jsonUsers from './data/users'
-// import jsonKitchens from './data/Kitchens'
-// import jsonDishTypes from './data/DishTypes'
-// import jsonIngredients from './data/Ingredient'
-// import jsonRecipes from './data/recipes'
-// import jsonRecipeIngredients from './data/RecipeIngrediaent'
-// import jsonRecipesPreperationSteps from './data/RecipePreperationStep'
-import UserProvider from './components/userContext'
+import jsonKitchens from './data/Kitchens'
+import jsonDishTypes from './data/DishTypes'
+import jsonIngredients from './data/Ingredient'
+import jsonRecipes from './data/recipes'
+import jsonRecipeIngredients from './data/RecipeIngrediaent'
+import jsonRecipesPreperationSteps from './data/RecipePreperationStep'
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      // recipeId: null,
-      // activeUser: null,
-      //  /*  activeUser: { */
-      //  /*    "id": 1, */
-      //  /*    "fname": "Benny", */
-      //  /*    "lname": "Regev", */
-      //  /*    "email": "benny@regev.com", */
-      //  /*    "pwd": "1969" */
-      //  /*  } */
+      recipeId: null,
+      activeUser: null,
+      //   activeUser:   {
+      //     "id": 1,
+      //     "fname": "Benny",
+      //     "lname": "Regev",
+      //     "email": "benny@regev.com",
+      //     "pwd": "1969"
+      // }
       allUsers: jsonUsers,
       allKitchens: jsonKitchens,
       allDishTypes: jsonDishTypes,
@@ -100,9 +99,7 @@ class App extends React.Component {
           <LoginPage users={allUsers} handleLogin={this.handleLogin} />
         </Route>
         <Route exact path="/recipes">
-          <UserProvider value={activeUser}>
-            <RecipesPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} />
-          </UserProvider>
+          <RecipesPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} />
         </Route>
         {/* 
         <Route path="/recipes/:id">

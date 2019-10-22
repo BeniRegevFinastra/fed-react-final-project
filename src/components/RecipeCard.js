@@ -30,13 +30,13 @@ class RecipeCard extends React.Component {
         userRecipes={activeUserRecipes} 
     */
     render() {
-        const { activeUser, allRecipes, recipe, activeUserRecipes, recipeData } = this.props;
+        const { activeUser, recipe, activeUserRecipes, recipeData } = this.props;
         const { navigateToRecipeId } = this.state;
 
         if (this.state.navigateToRecipeId != null) {
             const { navigateToRecipeId } = this.state;
             return (
-                <Redirect to={'/recipes/' + navigateToRecipeId} activeUser={activeUser} allRecipes={allRecipes} recipe={recipe} recipeData={recipeData} />
+                <Redirect to={'/recipes/' + navigateToRecipeId} activeUser={activeUser} recipe={recipe} recipeData={recipeData} recipeId={navigateToRecipeId} userRecipes={activeUserRecipes} />
             );
         } else {
             return (
