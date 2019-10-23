@@ -4,7 +4,6 @@ import { Container, Row, Col, Button, Modal, Form } from 'react-bootstrap'
 // import { Redirect } from 'react-router-dom'
 import RecipeCard from '../components/RecipeCard'
 
-
 class RecipesPage extends React.Component {
     constructor(props) {
         super(props);
