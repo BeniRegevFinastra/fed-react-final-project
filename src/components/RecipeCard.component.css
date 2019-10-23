@@ -16,3 +16,8 @@
     /* width: 500px; */
     height: 500px;
 }
+
+.buttonAddRemove {
+    width: 100%;
+    display: block;
+}

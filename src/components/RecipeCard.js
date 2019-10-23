@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
 import style from "./RecipeCard.component.css";
 
@@ -45,20 +45,34 @@ class RecipeCard extends React.Component {
         />
       );
     } else {
+    //   const selectedRecipe = activeUserRecipes.find(r => r.id === recipe.id);
+      const isSelected = false; //selectedRecipe !== null;
+      const buttonText = (isSelected ? "Remove From" : "Add To") + " Dinner";
+
+      const styleAddRemoveButton = {
+        textAlign: "center"
+        , fontSize: "1em"
+        , fontWeight: "bold"
+        , width: "100%"
+      };
+  
       return (
-          <Card className={style.recipeCard}>
-            <Card.Img
-              className={style.image}
-              onClick={this.openRecipeDetails}
-              variant="top"
-              src={recipe.img}
-            />
-            <Card.Body>
-              <Card.Title>{recipe.name}</Card.Title>
-              <Card.Subtitle>{recipe.desc}</Card.Subtitle>
-              <Card.Text>Cooking Time: {recipe.duration} min</Card.Text>
-            </Card.Body>
-          </Card>
+        <Card className={style.recipeCard}>
+          <Card.Img
+            className={style.image}
+            onClick={this.openRecipeDetails}
+            variant="top"
+            src={recipe.img}
+          />
+          <Card.Body>
+            <Card.Title>{recipe.name}</Card.Title>
+            <Card.Subtitle>{recipe.desc}</Card.Subtitle>
+            <Card.Text>Cooking Time: {recipe.duration} min</Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <Button style={styleAddRemoveButton}>{buttonText}</Button>
+          </Card.Footer>
+        </Card>
       );
     }
   }
