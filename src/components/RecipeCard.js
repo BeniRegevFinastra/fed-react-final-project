@@ -15,9 +15,10 @@ class RecipeCard extends React.Component {
 
     openRecipeDetails() {
         console.log("openRecipeDetails - RecipeId: " + this.props.recipe.id);
-        this.state.navigateToRecipeId = this.props.recipe.id;
-        this.state.recipeDetails = this.props.recipe;
-        this.setState(this.state);
+        let {navigateToRecipeId, recipeDetails} = this.state;
+        navigateToRecipeId = this.props.recipe.id;
+        recipeDetails = this.props.recipe;
+        this.setState({navigateToRecipeId, recipeDetails});
     }
 
     /*
@@ -30,13 +31,12 @@ class RecipeCard extends React.Component {
         userRecipes={activeUserRecipes} 
     */
     render() {
-        const { activeUser, recipe, activeUserRecipes, recipeData } = this.props;
-        const { navigateToRecipeId } = this.state;
+        const { activeUser, recipe, activeUserRecipes } = this.props;
 
         if (this.state.navigateToRecipeId != null) {
-            const { navigateToRecipeId } = this.state;
+            const { navigateToRecipeId, recipeDetails } = this.state;
             return (
-                <Redirect to={'/recipes/' + navigateToRecipeId} activeUser={activeUser} recipe={recipe} recipeData={recipeData} recipeId={navigateToRecipeId} userRecipes={activeUserRecipes} />
+                <Redirect to={'/recipes/' + navigateToRecipeId} activeUser={activeUser} recipe={recipe} recipeDetails={recipeDetails} />
             );
         } else {
             return (

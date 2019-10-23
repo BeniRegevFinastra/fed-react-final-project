@@ -1,5 +1,5 @@
 import React from 'react'
-import { Jumbotron, Container, Row, Col, Table, ListGroup, ListGroupItem } from 'react-bootstrap'
+import { Jumbotron, Container, Button, Row, Col, Table, ListGroup, ListGroupItem } from 'react-bootstrap'
 // import { Container, Row, Col, Table, ListGroup, ListGroupItem } from 'reactstrap';
 import RecipesNavbar from '../components/RecipesNavbar';
 
@@ -7,12 +7,14 @@ class RecipeDetailsPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            myRecipe: 69,
             recipe: null,
         }
     }
 
     componentDidMount() {
-        console.log("RecipeDetailsPage.componentDidMount() -- this.props.match.params.id = " + this.props.match.params.id);
+        //console.log("RecipeDetailsPage.componentDidMount() -- this.props.match.params.id = " + this.props.match.params.id);
+        console.log("this.state.myRecipe = " + this.state.myRecipe);
     }
 
     render() {
@@ -36,7 +38,8 @@ class RecipeDetailsPage extends React.Component {
                 <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout} />
                 <Jumbotron>
                     <Container>
-                        <h1 className="display-3">Show Details of Selected Recipe</h1>
+                        <Button href="#recipes">&lt;&lt; Back to Gallery</Button>
+                        <h1 className="display-3">Details of Selected Recipe</h1>
                         <Row>
                             <Col xs="12" md="6">
                                 <span><b>Name: </b></span>
@@ -150,6 +153,7 @@ class RecipeDetailsPage extends React.Component {
                             <ListGroupItem>1 tblspn White Sugar</ListGroupItem>
                             <ListGroupItem>2 cups All Purpose Flour</ListGroupItem>
                         </ListGroup>
+                        <Button href="#recipes">&lt;&lt; Back to Gallery</Button>
                     </Container>
                 </Jumbotron>
             </div>
@@ -158,4 +162,3 @@ class RecipeDetailsPage extends React.Component {
 }
 
 export default RecipeDetailsPage;
-

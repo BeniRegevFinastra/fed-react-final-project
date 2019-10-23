@@ -21,15 +21,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recipeId: null,
+      recipe: null,
       activeUser: null,
-      //   activeUser:   {
-      //     "id": 1,
-      //     "fname": "Benny",
-      //     "lname": "Regev",
-      //     "email": "benny@regev.com",
-      //     "pwd": "1969"
-      // }
       allUsers: jsonUsers,
       allKitchens: jsonKitchens,
       allDishTypes: jsonDishTypes,
@@ -74,7 +67,7 @@ class App extends React.Component {
   render() {
 
     // const activeUser = this.state.activeUser;
-    const { recipeId, activeUser, allUsers,
+    const { recipe, activeUser, allUsers,
       allRecipes,
       allKitchens,
       allDishTypes,
@@ -101,12 +94,10 @@ class App extends React.Component {
         <Route exact path="/recipes">
           <RecipesPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} />
         </Route>
-        {/* 
         <Route path="/recipes/:id">
-          <RecipeDetailsPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} />
+          <RecipeDetailsPage activeUser={activeUser} allRecipes={allRecipes} recipe={recipe} handleLogout={this.handleLogout} />
         </Route> 
-        */}
-        <Route path="/recipes/:id" component={RecipeDetailsPage} activeUser={activeUser} allRecipes={allRecipes} />
+        {/* <Route path="/recipes/:id" component={RecipeDetailsPage} activeUser={activeUser} allRecipes={allRecipes} /> */}
         <Route path="/dinner">
           <PlannedDinnerPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={activeUserRecipes} handleLogout={this.handleLogout} />
         </Route>
