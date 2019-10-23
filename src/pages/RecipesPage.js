@@ -51,13 +51,14 @@ class RecipesPage extends React.Component {
             </Col>
         );
 
+        const isHiddenNewRecipeButton = !activeUser || activeUser.role !== 'admin';
         return (
             <div>
                 <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout} />
                 <Container>
                     <div className="recipes-header">
-                        <h1>{activeUser.fname}'s Recipes</h1>
-                        <Button variant="primary" onClick={this.openModal}>New Recipe</Button>
+                        <h1>Showing All Recipes</h1>
+                        <Button variant="primary" hidden={isHiddenNewRecipeButton} onClick={this.openModal}>New Recipe</Button>
                     </div>
                     <Row>
                         {recipesCards}
