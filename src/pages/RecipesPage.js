@@ -16,7 +16,6 @@ class RecipesPage extends React.Component {
         this.closeModal = this.closeModal.bind(this);
         this.createRecipe = this.createRecipe.bind(this);
 
-
         this.nameInput = React.createRef();
         this.descInput = React.createRef();
         this.imgInput = React.createRef();
@@ -45,11 +44,6 @@ class RecipesPage extends React.Component {
     render() {
         const { activeUser, handleLogout, allRecipes } = this.props;
         const { showModal } = this.state;
-        //const showModal = this.state.showModal;
-
-        if (!activeUser) {
-            return <Redirect to="/" />
-        }
 
         const recipesCards = allRecipes.map(recipe =>
             <Col key={recipe.id} lg="3" md="6">
