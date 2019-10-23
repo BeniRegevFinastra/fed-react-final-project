@@ -35,11 +35,18 @@ class App extends React.Component {
       // activeUserRecipes: jsonRecipes.filter(recipe => recipe.userId === 1)
     }
 
-    this.handleLogout = this.handleLogout.bind(this);
-    this.handleLogin = this.handleLogin.bind(this);
     this.addRecipe = this.addRecipe.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
+    this.handlesSelectRecipe = this.handlesSelectRecipe.bind(this);
 
     console.log(this.state.allRecipes);
+  }
+
+  handlesSelectRecipe(recipeDetails) {
+    this.setState({
+      recipe: recipeDetails
+    });
   }
 
   handleLogout() {
@@ -92,12 +99,12 @@ class App extends React.Component {
           <LoginPage users={allUsers} handleLogin={this.handleLogin} />
         </Route>
         <Route exact path="/recipes">
-          <RecipesPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} userRecipes={activeUserRecipes} />
+          <RecipesPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={allRecipes} handleLogout={this.handleLogout} handleSelectRecipe={this.handlesSelectRecipe} userRecipes={activeUserRecipes} />
         </Route>
-        <Route path="/recipes/:id">
+        {/* <Route path="/recipes/:id">
           <RecipeDetailsPage activeUser={activeUser} allRecipes={allRecipes} recipe={recipe} handleLogout={this.handleLogout} />
-        </Route> 
-        {/* <Route path="/recipes/:id" component={RecipeDetailsPage} activeUser={activeUser} allRecipes={allRecipes} /> */}
+        </Route>  */}
+        <Route path="/recipes/:id" component={RecipeDetailsPage} activeUser={activeUser} allRecipes={allRecipes} />
         <Route path="/dinner">
           <PlannedDinnerPage activeUser={activeUser} addRecipe={this.addRecipe} allRecipes={activeUserRecipes} handleLogout={this.handleLogout} />
         </Route>

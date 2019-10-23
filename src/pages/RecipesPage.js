@@ -1,7 +1,7 @@
 import React from 'react'
 import RecipesNavbar from '../components/RecipesNavbar'
 import { Container, Row, Col, Button, Modal, Form } from 'react-bootstrap'
-import { Redirect } from 'react-router-dom'
+// import { Redirect } from 'react-router-dom'
 import RecipeCard from '../components/RecipeCard'
 
 
