@@ -37,15 +37,24 @@ class App extends React.Component {
     this.addRecipe = this.addRecipe.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
-    this.handlesSelectRecipe = this.handlesSelectRecipe.bind(this);
+    this.handleAddRemoveFromSelectedRecipe = this.handleAddRemoveFromSelectedRecipe.bind(this);
 
     console.log(this.state.allRecipes);
   }
 
-  handlesSelectRecipe(recipeDetails) {
-    this.setState({
-      recipe: recipeDetails
-    });
+  handleAddRemoveFromSelectedRecipe(recipeDetails) {
+    let { activeUserRecipes } = this.state;
+    const selectedRecipe = activeUserRecipes.find(r => r.id === recipeDetails.id);
+    const arrayIndex = activeUserRecipes.indexOf(recipeDetails);
+    const isExists = arrayIndex !== -1;   //  selectedRecipe !== undefined ;
+
+    if (isExists) {
+      activeUserRecipes.splice(arrayIndex, 1);
+    } else {
+      activeUserRecipes = [...activeUserRecipes, recipeDetails];
+    }
+
+    this.setState({ activeUserRecipes });
   }
 
   handleLogout() {
@@ -113,7 +122,7 @@ class App extends React.Component {
               addRecipe={this.addRecipe}
               allRecipes={allRecipes}
               handleLogout={this.handleLogout}
-              handleSelectRecipe={this.handlesSelectRecipe}
+              handleSelectRecipes={this.handleAddRemoveFromSelectedRecipe}
               userRecipes={activeUserRecipes}
             />
           </Route>

@@ -14,6 +14,7 @@ class RecipesPage extends React.Component {
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.createRecipe = this.createRecipe.bind(this);
+        this.handleSelectRecipes = this.handleSelectRecipes.bind(this);
 
         this.nameInput = React.createRef();
         this.descInput = React.createRef();
@@ -27,6 +28,10 @@ class RecipesPage extends React.Component {
 
     closeModal() {
         this.setState({ showModal: false })
+    }
+
+    handleSelectRecipes(recipe) {
+        this.props.handleSelectRecipes(recipe);
     }
 
     createRecipe() {
@@ -46,7 +51,7 @@ class RecipesPage extends React.Component {
 
         const recipesCards = allRecipes.map(recipe =>
             <Col key={recipe.id} lg="3" md="6">
-                <RecipeCard recipe={recipe} />
+                <RecipeCard recipe={recipe} selectedRecipes={this.props.userRecipes} selectRecipe={this.handleSelectRecipes} />
             </Col>
         );
 

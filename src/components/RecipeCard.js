@@ -12,6 +12,7 @@ class RecipeCard extends React.Component {
       recipeDetails: null
     };
     this.openRecipeDetails = this.openRecipeDetails.bind(this);
+    this.addRemoveFromSelectedRecipes = this.addRemoveFromSelectedRecipes.bind(this);
   }
 
   openRecipeDetails() {
@@ -20,6 +21,12 @@ class RecipeCard extends React.Component {
     navigateToRecipeId = this.props.recipe.id;
     recipeDetails = this.props.recipe;
     this.setState({ navigateToRecipeId, recipeDetails });
+  }
+
+  addRemoveFromSelectedRecipes() {
+    console.log("addRemoveFromSelectedRecipes(event)");
+    const { recipe } = this.props;
+    this.props.selectRecipe(recipe);
   }
 
   /*
@@ -45,8 +52,8 @@ class RecipeCard extends React.Component {
         />
       );
     } else {
-    //   const selectedRecipe = activeUserRecipes.find(r => r.id === recipe.id);
-      const isSelected = false; //selectedRecipe !== null;
+      const selectedRecipe = this.props.selectedRecipes.find(r => r.id === recipe.id);
+      const isSelected = selectedRecipe !== undefined;
       const buttonText = (isSelected ? "Remove From" : "Add To") + " Dinner";
 
       const styleAddRemoveButton = {
@@ -70,7 +77,7 @@ class RecipeCard extends React.Component {
             <Card.Text>Cooking Time: {recipe.duration} min</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Button style={styleAddRemoveButton}>{buttonText}</Button>
+            <Button style={styleAddRemoveButton} onClick={this.addRemoveFromSelectedRecipes}>{buttonText}</Button>
           </Card.Footer>
         </Card>
       );
