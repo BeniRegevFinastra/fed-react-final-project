@@ -7,7 +7,7 @@
         "duration": 15,
         "difficultyLevel": 2,
         "type": "Eggs",
-        "userId": 1,
+        "userId": null,
         "ingredients": [
             {
                 "ingredientId": 1,
@@ -144,7 +144,7 @@
         "duration": 10,
         "difficultyLevel": 1,
         "type": "Vegeterian",
-        "userId": 1,
+        "userId": null,
         "ingredients": [
             {
                 "ingredientId": 2,
@@ -199,7 +199,7 @@
         "duration": 15,
         "difficultyLevel": 2,
         "type": "Eggs",
-        "userId": 2,
+        "userId": null,
         "ingredients": [
             {
                 "ingredientId": 1,
@@ -336,7 +336,7 @@
         "duration": 10,
         "difficultyLevel": 1,
         "type": "Vegeterian",
-        "userId": 2,
+        "userId": null,
         "ingredients": [
             {
                 "ingredientId": 2,
@@ -391,7 +391,7 @@
         "duration": 90,
         "difficultyLevel": 2,
         "type": "Fish",
-        "userId": 2,
+        "userId": null,
         "ingredients": [],
         "preparationSteps": []
     },
@@ -403,7 +403,7 @@
         "duration": 15,
         "difficultyLevel": 2,
         "type": "Eggs",
-        "userId": 3,
+        "userId": null,
         "ingredients": [
             {
                 "ingredientId": 1,
@@ -540,7 +540,7 @@
         "duration": 10,
         "difficultyLevel": 1,
         "type": "Vegeterian",
-        "userId": 3,
+        "userId": null,
         "ingredients": [
             {
                 "ingredientId": 2,
@@ -595,7 +595,7 @@
         "duration": 15,
         "difficultyLevel": 2,
         "type": "Eggs",
-        "userId": 4,
+        "userId": null,
         "ingredients": [
             {
                 "ingredientId": 1,
@@ -732,7 +732,7 @@
         "duration": 10,
         "difficultyLevel": 1,
         "type": "Vegeterian",
-        "userId": 4,
+        "userId": null,
         "ingredients": [
             {
                 "ingredientId": 2,
@@ -787,7 +787,7 @@
         "duration": 30,
         "difficultyLevel": 2,
         "type": "Vigan Friendly",
-        "userId": 2,
+        "userId": null,
         "ingredients": [],
         "preparationSteps": []
     },
@@ -799,7 +799,7 @@
         "duration": 30,
         "difficultyLevel": 1,
         "type": "Vigan Friendly",
-        "userId": 2,
+        "userId": null,
         "ingredients": [],
         "preparationSteps": []
     }

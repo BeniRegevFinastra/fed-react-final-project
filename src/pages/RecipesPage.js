@@ -51,7 +51,7 @@ class RecipesPage extends React.Component {
 
         const recipesCards = allRecipes.map(recipe =>
             <Col key={recipe.id} lg="3" md="6">
-                <RecipeCard recipe={recipe} selectedRecipes={this.props.userRecipes} selectRecipe={this.handleSelectRecipes} />
+                <RecipeCard activeUser={this.props.activeUser} recipe={recipe} selectedRecipes={this.props.userRecipes} selectRecipe={this.handleSelectRecipes} />
             </Col>
         );
 

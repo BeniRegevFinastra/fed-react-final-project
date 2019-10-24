@@ -77,7 +77,7 @@ class RecipeCard extends React.Component {
             <Card.Text>Cooking Time: {recipe.duration} min</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Button style={styleAddRemoveButton} onClick={this.addRemoveFromSelectedRecipes}>{buttonText}</Button>
+            <Button style={styleAddRemoveButton} disabled={!this.props.activeUser} onClick={this.addRemoveFromSelectedRecipes}>{buttonText}</Button>
           </Card.Footer>
         </Card>
       );
