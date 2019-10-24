@@ -40,10 +40,10 @@ class RecipesNavbar extends React.Component {
                         <Nav.Link href="#/recipes">Recipes</Nav.Link>
                     </Nav>
                     <Nav className="mr-auto">
-                        <Nav.Link href="#/dinner">Dinner</Nav.Link>
+                        <Nav.Link disabled={!activeUser} href="#/dinner">Dinner</Nav.Link>
                     </Nav>
                     <Nav className="mr-auto">
-                        <Nav.Link href="#/shopping">Shopping</Nav.Link>
+                        <Nav.Link disabled={!activeUser} href="#/shopping">Shopping</Nav.Link>
                     </Nav>
                     <Nav className="ml-auto">
                         {linkSignup}

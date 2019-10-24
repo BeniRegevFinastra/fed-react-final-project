@@ -1,31 +1,139 @@
-import React from 'react'
-import {Jumbotron, Button, Container} from 'react-bootstrap'
-import RecipesNavbar from '../components/RecipesNavbar';
+import React from "react";
+import { Jumbotron, Button, Container } from "react-bootstrap";
+import Carousel from "react-bootstrap/Carousel";
+import RecipesNavbar from "../components/RecipesNavbar";
 
 class HomePage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {}
-    }
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-    render() {
-        const { activeUser, handleLogout } = this.props;
+  render() {
+    const { activeUser, handleLogout } = this.props;
 
-        return (
-            <div>
-                <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout}/>
-                <Jumbotron>
-                    <Container>
-                        <h1 className="display-3">Chef BEN's Recipe Book App</h1>
-                        <h4 className="display-7">Master your recipes</h4>
-                        <p>
-                            You are now browsing as a Guest, You can <Button variant="primary" href="#/login">Login</Button>
-                        </p>
-                    </Container>
-                </Jumbotron>
-            </div>
-        );
-    }
+    const styleJumbotron = {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center"
+    };
+    return (
+      <div>
+        <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout} />
+        <Jumbotron style={styleJumbotron}>
+          <Container>
+            <h1 className="display-3">Chef BEN's Recipes Application</h1>
+            <h3 className="display-7">
+              You Are Invited To Master your recipes &amp; Dinner:{" "}
+            </h3>
+            <h6>
+              Browse Recipes, Select Recipes For Dinner, Create a Shopping List
+              &amp; Find The Best Prices Using The Price-Compare API
+            </h6>
+            <p>
+              You are now browsing as a Guest, You can{" "}
+              <Button variant="primary" href="#/login">
+                Login
+              </Button>
+            </p>
+          </Container>
+        </Jumbotron>
+        <Container id="containerCarousel">
+          <Carousel>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="images/Black-Forest-and-Cheese-Cake.jpg"
+                alt="black forest and cheese cakes"
+              />
+              <Carousel.Caption>
+                <h3>First Happy Birthday</h3>
+                <p>Black Forest &amp; Cheese Cakes</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="images/Ears for Purim.jpg"
+                alt="ears for purim"
+              />
+
+              <Carousel.Caption>
+                <h3>Second For Purim</h3>
+                <p>Box full of ears for Purim.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="images/hanukia-cake-for-hanuka.jpg"
+                alt="hanukia cake for hanuka"
+              />
+
+              <Carousel.Caption>
+                <h3>Third For Hanuka</h3>
+                <p>Hanukia Cake -- light the candles and then eat the cake.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="images/nice-cake-1.png"
+                alt="nice-cake-1"
+              />
+
+              <Carousel.Caption>
+                <h3>Fourth Nice Cake 1</h3>
+                <p>Nice Cake for Birthday (1).</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="images/nice-cake-2.jpg"
+                alt="nice-cake-2"
+              />
+
+              <Carousel.Caption>
+                <h3>Fifth Nice Cake 2</h3>
+                <p>Nice Cake for Birthday (2).</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="images/nice-cake-3.jpg"
+                alt="nice-cake-3"
+              />
+
+              <Carousel.Caption>
+                <h3>Sixth Nice Cake 3</h3>
+                <p>Nice Cake for Birthday (3).</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="images/having-fun.jpg"
+                alt="having-fun"
+              />
+
+              <Carousel.Caption>
+                <h3>Seventh Having Fun</h3>
+                <p>Having Fun A.K.A. The Cama Sutra Cake.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+        </Container>
+      </div>
+    );
+  }
 }
 
 export default HomePage;

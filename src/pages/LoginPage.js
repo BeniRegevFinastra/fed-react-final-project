@@ -34,8 +34,6 @@ class LoginPage extends React.Component {
         } else {
             this.setState({invalidLogin: true});
         }
-
-
     }
 
     render() {
@@ -47,7 +45,8 @@ class LoginPage extends React.Component {
         return (
             <div className="login">
                 <h1>Login to Recipe Book</h1>
-                <p>or <a href="#/signup">create an account</a></p>
+                {/* <p>or <a href="#/signup">create an account</a></p> */}
+                <p>or contact an admin to create an account for you</p>
                 <Alert variant="danger" show={this.state.invalidLogin}>
                     Invalid email or password!
                 </Alert>
@@ -63,6 +62,9 @@ class LoginPage extends React.Component {
                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control ref={this.pwdInput}  type="password" placeholder="Password"/>
+                        <Form.Text className="text-muted">
+                            Passwords are like underwear, don't share them with anyone.
+                        </Form.Text>
                     </Form.Group>
                     <Button variant="success" type="button" block onClick={this.login}>
                         Login
