@@ -12,6 +12,9 @@ class HomePage extends React.Component {
   render() {
     const { activeUser, handleLogout } = this.props;
 
+    const imgWidth = 200;
+    const imgHeight = 300;
+
     const styleJumbotron = {
       display: "flex",
       flexDirection: "row",
@@ -42,6 +45,8 @@ class HomePage extends React.Component {
           <Carousel>
             <Carousel.Item>
               <img
+                width={imgWidth}
+                height={imgHeight}
                 className="d-block w-100"
                 src="images/Black-Forest-and-Cheese-Cake.jpg"
                 alt="black forest and cheese cakes"
@@ -54,6 +59,8 @@ class HomePage extends React.Component {
 
             <Carousel.Item>
               <img
+                width={imgWidth}
+                height={imgHeight}
                 className="d-block w-100"
                 src="images/Ears for Purim.jpg"
                 alt="ears for purim"
@@ -67,6 +74,8 @@ class HomePage extends React.Component {
 
             <Carousel.Item>
               <img
+                width={imgWidth}
+                height={imgHeight}
                 className="d-block w-100"
                 src="images/hanukia-cake-for-hanuka.jpg"
                 alt="hanukia cake for hanuka"
@@ -80,6 +89,8 @@ class HomePage extends React.Component {
 
             <Carousel.Item>
               <img
+                width={imgWidth}
+                height={imgHeight}
                 className="d-block w-100"
                 src="images/nice-cake-1.png"
                 alt="nice-cake-1"
@@ -93,6 +104,8 @@ class HomePage extends React.Component {
 
             <Carousel.Item>
               <img
+                width={imgWidth}
+                height={imgHeight}
                 className="d-block w-100"
                 src="images/nice-cake-2.jpg"
                 alt="nice-cake-2"
@@ -106,6 +119,8 @@ class HomePage extends React.Component {
 
             <Carousel.Item>
               <img
+                width={imgWidth}
+                height={imgHeight}
                 className="d-block w-100"
                 src="images/nice-cake-3.jpg"
                 alt="nice-cake-3"
@@ -119,6 +134,8 @@ class HomePage extends React.Component {
 
             <Carousel.Item>
               <img
+                width={imgWidth}
+                height={imgHeight}
                 className="d-block w-100"
                 src="images/having-fun.jpg"
                 alt="having-fun"

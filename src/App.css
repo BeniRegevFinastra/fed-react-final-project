@@ -61,3 +61,7 @@
   flex-direction: column;
   width: 85%;
 };
+
+.carousel-item img {
+  height: 30px;
+}
