@@ -15,15 +15,10 @@ class HomePage extends React.Component {
     const imgWidth = 200;
     const imgHeight = 300;
 
-    const styleJumbotron = {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "center"
-    };
     return (
       <div>
         <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout} />
-        <Jumbotron style={styleJumbotron}>
+        <Jumbotron>
           <Container>
             <h1 className="display-3">Chef BEN's Recipes Application</h1>
             <h3 className="display-7">
@@ -41,13 +36,13 @@ class HomePage extends React.Component {
             </p>
           </Container>
         </Jumbotron>
-        <Container id="containerCarousel">
+        <Container>
           <Carousel>
             <Carousel.Item>
               <img
-                width={imgWidth}
+                width="auto"
                 height={imgHeight}
-                className="d-block w-100"
+                className="d-block"
                 src="images/Black-Forest-and-Cheese-Cake.jpg"
                 alt="black forest and cheese cakes"
               />
@@ -59,9 +54,9 @@ class HomePage extends React.Component {
 
             <Carousel.Item>
               <img
-                width={imgWidth}
+                width="auto"
                 height={imgHeight}
-                className="d-block w-100"
+                className="d-block"
                 src="images/Ears for Purim.jpg"
                 alt="ears for purim"
               />
@@ -74,9 +69,9 @@ class HomePage extends React.Component {
 
             <Carousel.Item>
               <img
-                width={imgWidth}
+                width="auto"
                 height={imgHeight}
-                className="d-block w-100"
+                className="d-block"
                 src="images/hanukia-cake-for-hanuka.jpg"
                 alt="hanukia cake for hanuka"
               />
@@ -89,9 +84,9 @@ class HomePage extends React.Component {
 
             <Carousel.Item>
               <img
-                width={imgWidth}
+                width="auto"
                 height={imgHeight}
-                className="d-block w-100"
+                className="d-block"
                 src="images/nice-cake-1.png"
                 alt="nice-cake-1"
               />
@@ -104,9 +99,9 @@ class HomePage extends React.Component {
 
             <Carousel.Item>
               <img
-                width={imgWidth}
+                width="auto"
                 height={imgHeight}
-                className="d-block w-100"
+                className="d-block"
                 src="images/nice-cake-2.jpg"
                 alt="nice-cake-2"
               />
@@ -119,9 +114,9 @@ class HomePage extends React.Component {
 
             <Carousel.Item>
               <img
-                width={imgWidth}
+                width="auto"
                 height={imgHeight}
-                className="d-block w-100"
+                className="d-block"
                 src="images/nice-cake-3.jpg"
                 alt="nice-cake-3"
               />
@@ -134,9 +129,9 @@ class HomePage extends React.Component {
 
             <Carousel.Item>
               <img
-                width={imgWidth}
+                width="auto"
                 height={imgHeight}
-                className="d-block w-100"
+                className="d-block "
                 src="images/having-fun.jpg"
                 alt="having-fun"
               />

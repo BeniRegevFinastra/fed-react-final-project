@@ -30,14 +30,13 @@
 .login {
   max-width: 500px;
   margin: 50px auto;
-
 }
 
 .recipe {
   height: 100%;
 }
 
-.recipe > img {
+.recipe>img {
   height: 250px;
   object-fit: cover;
 }
@@ -48,20 +47,48 @@
   margin-top: 30px;
 }
 
-.recipes-header > button {
+.recipes-header>button {
   margin-left: auto;
 }
+
 .App div.jumbotron {
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
+
 .App div.container {
   background-color: #fff;
   box-shadow: 0px 5px 20px rgb(71, 71, 71);
-  display: flex;
-  flex-direction: column;
-  width: 85%;
-};
+  padding: 2px 20px;
+}
+
+.display-3 {
+  text-align: center;
+}
+
+.carousel-inner {
+  left: 250px;
+  width: 80%;
+  /* border: 3px solid black; */
+}
+
+.carousel-item {
+  height: 400px;
+  width: auto;
+  max-width: 50%;
+}
 
 .carousel-item img {
-  height: 30px;
+  height: 100%;
+  width: auto;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+  color: #000;
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 1rem 1rem;
+  }
 }
