@@ -1,6 +1,7 @@
 import React from 'react'
 import { Jumbotron, Button, Container } from 'react-bootstrap'
 import RecipesNavbar from '../components/RecipesNavbar';
+import { Redirect } from 'react-router-dom';
 
 class ShoppingListPage extends React.Component {
     constructor(props) {
@@ -9,6 +10,10 @@ class ShoppingListPage extends React.Component {
     }
     render() {
         const { activeUser, handleLogout } = this.props;
+
+        if (!activeUser) {
+            return <Redirect to="/" />
+        }
 
         return (
             <div>

@@ -92,3 +92,7 @@
     padding: 1rem 1rem;
   }
 }
+
+#dinner-title h6 {
+  text-align: center;
+}

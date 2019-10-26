@@ -47,7 +47,7 @@ class HomePage extends React.Component {
                 alt="black forest and cheese cakes"
               />
               <Carousel.Caption>
-                <h3>First Happy Birthday</h3>
+                <h3>First: Happy Birthday</h3>
                 <p>Black Forest &amp; Cheese Cakes</p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -60,9 +60,8 @@ class HomePage extends React.Component {
                 src="images/Ears for Purim.jpg"
                 alt="ears for purim"
               />
-
               <Carousel.Caption>
-                <h3>Second For Purim</h3>
+                <h3>Second: For Purim</h3>
                 <p>Box full of ears for Purim.</p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -75,9 +74,8 @@ class HomePage extends React.Component {
                 src="images/hanukia-cake-for-hanuka.jpg"
                 alt="hanukia cake for hanuka"
               />
-
               <Carousel.Caption>
-                <h3>Third For Hanuka</h3>
+                <h3>Third: For Hanuka</h3>
                 <p>Hanukia Cake -- light the candles and then eat the cake.</p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -90,9 +88,8 @@ class HomePage extends React.Component {
                 src="images/nice-cake-1.png"
                 alt="nice-cake-1"
               />
-
               <Carousel.Caption>
-                <h3>Fourth Nice Cake 1</h3>
+                <h3>Fourth: Nice Cake 1</h3>
                 <p>Nice Cake for Birthday (1).</p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -105,9 +102,8 @@ class HomePage extends React.Component {
                 src="images/nice-cake-2.jpg"
                 alt="nice-cake-2"
               />
-
               <Carousel.Caption>
-                <h3>Fifth Nice Cake 2</h3>
+                <h3>Fifth: Nice Cake 2</h3>
                 <p>Nice Cake for Birthday (2).</p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -120,9 +116,8 @@ class HomePage extends React.Component {
                 src="images/nice-cake-3.jpg"
                 alt="nice-cake-3"
               />
-
               <Carousel.Caption>
-                <h3>Sixth Nice Cake 3</h3>
+                <h3>Sixth: Nice Cake 3</h3>
                 <p>Nice Cake for Birthday (3).</p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -135,12 +130,26 @@ class HomePage extends React.Component {
                 src="images/having-fun.jpg"
                 alt="having-fun"
               />
-
               <Carousel.Caption>
-                <h3>Seventh Having Fun</h3>
+                <h3>Seventh: Having Fun</h3>
                 <p>Having Fun A.K.A. The Cama Sutra Cake.</p>
               </Carousel.Caption>
             </Carousel.Item>
+
+            <Carousel.Item>
+              <img
+                width="auto"
+                height={imgHeight}
+                className="d-block "
+                src="images/chocolate-cup-cake.JPG"
+                alt="having-fun"
+              />
+              <Carousel.Caption>
+                <h3>Eighth: Cupcake</h3>
+                <p>Chocolate Cupcake For Someone Very Special.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+
           </Carousel>
         </Container>
       </div>

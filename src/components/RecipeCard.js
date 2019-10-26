@@ -56,6 +56,7 @@ class RecipeCard extends React.Component {
       const isSelected = selectedRecipe !== undefined;
       const buttonText = (isSelected ? "Remove From" : "Add To") + " Dinner";
 
+      const hideArrRemoveButton = this.props.fromPage !== 'recipes';
       const styleAddRemoveButton = {
         textAlign: "center"
         , fontSize: "1em"
@@ -77,7 +78,7 @@ class RecipeCard extends React.Component {
             <Card.Text>Cooking Time: {recipe.duration} min</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Button style={styleAddRemoveButton} disabled={!this.props.activeUser} onClick={this.addRemoveFromSelectedRecipes}>{buttonText}</Button>
+            <Button style={styleAddRemoveButton} hidden={hideArrRemoveButton} disabled={!this.props.activeUser} onClick={this.addRemoveFromSelectedRecipes}>{buttonText}</Button>
           </Card.Footer>
         </Card>
       );

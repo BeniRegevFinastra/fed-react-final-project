@@ -118,6 +118,7 @@ class App extends React.Component {
           </Route>
           <Route exact path="/recipes">
             <RecipesPage
+              fromPage={'recipes'} 
               activeUser={activeUser}
               addRecipe={this.addRecipe}
               allRecipes={allRecipes}
@@ -137,9 +138,11 @@ class App extends React.Component {
           />
           <Route path="/dinner">
             <PlannedDinnerPage
+              fromPage={'dinner'} 
               activeUser={activeUser}
               addRecipe={this.addRecipe}
-              allRecipes={activeUserRecipes}
+              allRecipes={allRecipes}
+              userSelectedRecipes={activeUserRecipes}
               handleLogout={this.handleLogout}
             />
           </Route>
