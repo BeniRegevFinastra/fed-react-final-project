@@ -2,117 +2,209 @@
     {
       "id": 1,
       "name": "Egg",
-      "defaultMeasuring": "unit"
+      "defaultMeasuring": "unit",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 2,
       "name": "Tameto",
-      "defaultMeasuring": "unit"
+      "defaultMeasuring": "unit",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 3,
       "name": "Onion",
-      "defaultMeasuring": "unit"
+      "defaultMeasuring": "unit",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 4,
       "name": "Garlic",
-      "defaultMeasuring": "head"
+      "defaultMeasuring": "head",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 5,
       "name": "Sweet Paprica Power",
-      "defaultMeasuring": "tablespoon"
+      "defaultMeasuring": "tablespoon",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 6,
       "name": "Hot Paprica Powder",
-      "defaultMeasuring": "teaspoon"
+      "defaultMeasuring": "teaspoon",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 7,
       "index": 7,
       "name": "White Pepper Powder",
-      "defaultMeasuring": "teaspoon"
+      "defaultMeasuring": "teaspoon",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 8,
       "name": "Table Salt",
-      "defaultMeasuring": "teaspoon"
+      "defaultMeasuring": "teaspoon",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 9,
       "name": "Black Pepper Powder",
-      "defaultMeasuring": "teaspoon"
+      "defaultMeasuring": "teaspoon",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 10,
       "name": "Purple Onion",
-      "defaultMeasuring": "unit"
+      "defaultMeasuring": "unit",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 11,
       "name": "Slaty Cheese",
-      "defaultMeasuring": "gr"
+      "defaultMeasuring": "gr",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 12,
       "name": "Black Olives Sliced",
-      "defaultMeasuring": "gr"
+      "defaultMeasuring": "gr",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 13,
       "name": "Yogurt",
-      "defaultMeasuring": "cup"
+      "defaultMeasuring": "cup",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 14,
       "name": "Hering Fish Thin Sliced",
-      "defaultMeasuring": "gr"
+      "defaultMeasuring": "gr",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 15,
       "name": "Pateto",
-      "defaultMeasuring": "unit"
+      "defaultMeasuring": "unit",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 16,
       "name": "Beans",
-      "defaultMeasuring": "gr"
+      "defaultMeasuring": "gr",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 17,
       "name": "Picked Cabage",
-      "defaultMeasuring": "gr"
+      "defaultMeasuring": "gr",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 18,
       "name": "Bitroot",
-      "defaultMeasuring": "unit"
+      "defaultMeasuring": "unit",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 19,
       "name": "Mayonese",
-      "defaultMeasuring": "tablespoon"
+      "defaultMeasuring": "tablespoon",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
       "id": 20,
       "name": "ChickBeans",
-      "defaultMeasuring": "gr"
+      "defaultMeasuring": "gr",
+      "quantity": null,
+      "lowestPricePerUnit": null,
+      "lowestPriceStopId": null,
+      "lowestPriceShopName": null
     },
     {
-        "ingredientId": 21,
+        "id": 21,
         "name": "Parsley",
-        "defaultMeasuring": "gr"
+        "defaultMeasuring": "gr",
+        "quantity": null,
+        "lowestPricePerUnit": null,
+        "lowestPriceStopId": null,
+        "lowestPriceShopName": null
     },
     {
-        "ingredientId": 22,
+        "id": 22,
         "name": "Cumin Powder",
-        "defaultMeasuring": "teaspoon"
+        "defaultMeasuring": "teaspoon",
+        "quantity": null,
+        "lowestPricePerUnit": null,
+        "lowestPriceStopId": null,
+        "lowestPriceShopName": null
     },
     {
-        "ingredientId": 23,
+        "id": 23,
         "name": "Water",
-        "defaultMeasuring": "cup"
+        "defaultMeasuring": "cup",
+        "quantity": null,
+        "lowestPricePerUnit": null,
+        "lowestPriceStopId": null,
+        "lowestPriceShopName": null
     }
   ]

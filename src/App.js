@@ -153,6 +153,7 @@ class App extends React.Component {
               allRecipes={allRecipes}
               handleLogout={this.handleLogout}
               userRecipes={activeUserRecipes}
+              ingredients={allIngredients}
             />
           </Route>
         </Switch>
