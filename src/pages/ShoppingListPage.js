@@ -6,6 +6,7 @@ import { Redirect } from "react-router-dom";
 import axios from "axios";
 import RecipesNavbar from "../components/RecipesNavbar";
 import ProductComponent from "../components/ProductComponent";
+import ShopProduct from "../models/ShopProduct";
 
 class ShoppingListPage extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class ShoppingListPage extends React.Component {
     //  Scan all recipes
     userRecipes.map(recipe => {
       if (recipe.ingredients.length > 0) {
-        //    Scan each recipe-ingredients to find in ingredients array
+        //  Scan each recipe-ingredients to find in ingredients array
         for (let i = 0; i < recipe.ingredients.length; i++) {
           for (let j = 0; j < productsForShopping.length; j++) {
             if (
@@ -44,7 +45,7 @@ class ShoppingListPage extends React.Component {
                     "lowestPricePerUnit": nnnnnn.nn,
                     "lowestPriceStopId": nnnn,
                     "lowestPriceShopName": "shop-name"
-                }    */
+                  } */
               productsForShopping[j].quantity =
                 productsForShopping[j].quantity === null
                   ? recipe.ingredients[i].quantity
@@ -60,9 +61,13 @@ class ShoppingListPage extends React.Component {
       product => product.quantity !== null
     );
 
-    // //  Get lowest price and shop-details from price-compare API
-    // // productsForShopping.map(product => {
-    // // });
+    // for (let i=0; i < productsForShopping.length; i++){
+    //   this.getLowestPriceOfProduct(productsForShopping[i].id).then(shopProduct => {
+    //     console.log(shopProduct);
+    //   });
+    // }
+
+
     // const sampleShopProduct1 = {
     //   id: 1,
     //   name: "Egg",
@@ -89,6 +94,29 @@ class ShoppingListPage extends React.Component {
     //   "sampleShopProduct7 returned (should have FAILED with HTTPStatusCode 404 NOT FOUND)!"
     // );
     this.setState({ productsForShopping });
+  }
+
+  // new way of writing an consuming an async function
+  async getLowestPriceOfProduct(productId) {
+    let apiGetProductLowestPriceURL = `http://localhost:8080/shopProduct/getLowestPrice/product/${productId}`;
+    const response = await axios
+      .get(apiGetProductLowestPriceURL)
+      .catch(error => console.log(error));
+
+    const { status, statusText, data } = response;
+    console.log("status=" + status + "; statusText=" + statusText);
+
+    /*  data = ShopProduct = {
+          "id": "3",
+          "shopId": "3",
+          "shopName": "",
+          "productId": "1",
+          "productName": "",
+          "pricePerUnit": 11.30,
+          "measuringUnits": "box"
+        } */
+    const productLowestPrice = new ShopProduct (data.id, data.shopId, data.shopName, data.productId, data.productName, data.pricePerUnit, data.measuringUnits);
+    return productLowestPrice;
   }
 
   getProductLowestPrice(shopProduct) {

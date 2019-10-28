@@ -6,7 +6,7 @@
       "defaultMeasuring": "unit",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -16,7 +16,7 @@
       "defaultMeasuring": "unit",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -26,7 +26,7 @@
       "defaultMeasuring": "unit",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -36,7 +36,7 @@
       "defaultMeasuring": "head",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -46,7 +46,7 @@
       "defaultMeasuring": "tablespoon",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -56,7 +56,7 @@
       "defaultMeasuring": "teaspoon",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -66,7 +66,7 @@
       "defaultMeasuring": "teaspoon",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -76,7 +76,7 @@
       "defaultMeasuring": "teaspoon",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -86,7 +86,7 @@
       "defaultMeasuring": "teaspoon",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -96,7 +96,7 @@
       "defaultMeasuring": "unit",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -106,7 +106,7 @@
       "defaultMeasuring": "gr",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -116,7 +116,7 @@
       "defaultMeasuring": "gr",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -126,7 +126,7 @@
       "defaultMeasuring": "cup",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -137,7 +137,7 @@
       "defaultMeasuring": "gr",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -147,7 +147,7 @@
       "defaultMeasuring": "unit",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -157,7 +157,7 @@
       "defaultMeasuring": "gr",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -167,7 +167,7 @@
       "defaultMeasuring": "gr",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -177,7 +177,7 @@
       "defaultMeasuring": "unit",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -187,7 +187,7 @@
       "defaultMeasuring": "tablespoon",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -197,7 +197,7 @@
       "defaultMeasuring": "gr",
       "quantity": null,
       "lowestPricePerUnit": null,
-      "lowestPriceStopId": null,
+      "lowestPriceShopId": null,
       "lowestPriceShopName": null
     },
     {
@@ -207,7 +207,7 @@
         "defaultMeasuring": "gr",
         "quantity": null,
         "lowestPricePerUnit": null,
-        "lowestPriceStopId": null,
+        "lowestPriceShopId": null,
         "lowestPriceShopName": null
     },
     {
@@ -217,7 +217,7 @@
         "defaultMeasuring": "teaspoon",
         "quantity": null,
         "lowestPricePerUnit": null,
-        "lowestPriceStopId": null,
+        "lowestPriceShopId": null,
         "lowestPriceShopName": null
     },
     {
@@ -227,7 +227,7 @@
         "defaultMeasuring": "cup",
         "quantity": null,
         "lowestPricePerUnit": null,
-        "lowestPriceStopId": null,
+        "lowestPriceShopId": null,
         "lowestPriceShopName": null
     }
   ]

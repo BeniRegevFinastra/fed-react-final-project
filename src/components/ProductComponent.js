@@ -1,14 +1,65 @@
 import React from "react";
+import axios from "axios";
 
 class ProductComponent extends React.Component {
+  /*  productData: {
+        defaultMeasuring: "xxxxxxx",
+        id: nn,
+        imageUrl: "xxxxxxx",
+        lowestPricePerUnit: nnnnn.nn,
+        lowestShopId: nnnnn,
+        lowestShopName: "xxxxxxx"
+        name: "xxxxxxx",
+        quantity: nnnnn	
+      } */
   constructor(props) {
     super(props);
     this.state = {
-      productDetails: null,
-      navigateToProductId: null
+      productData: null,
+      lowestPricePerUnit: null,
+      lowestShopId: null,
+      lowestShopName: null,
+      navigateToProductId: null,
     };
     // this.openProductDetails = this.openProductDetails.bind(this);
     // this.addRemoveFromShoppingList = this.addRemoveFromShoppingList.bind(this);
+  }
+
+  componentDidMount() {
+    const { productData } = this.props;
+    const productId = this.props.productData.id;
+    let apiGetProductLowestPriceURL = `http://localhost:8080/shopProduct/getLowestPrice/product/${productId}`;
+    axios.get(apiGetProductLowestPriceURL).then(response => {
+        const { status, statusText, data } = response;
+        console.log("status=" + status + "; statusText=" + statusText);
+        /*  data = ShopProduct = {
+              "id": "3",
+              "shopId": "3",
+              "shopName": "",
+              "productId": "1",
+              "productName": "",
+              "pricePerUnit": 11.30,
+              "measuringUnits": "box"
+            } 
+        */
+        productData.lowestPricePerUnit = data.pricePerUnit;
+        productData.lowestShopId = data.shopId;
+        productData.lowestShopName = data.shopName;
+        console.log("componentDidMount() -- id=" + productId + 
+                    " ; lowestPricePerUnit=" + data.pricePerUnit + 
+                    " ; lowestShopId=" + data.shopId + 
+                    " ; lowestShopName=" + data.shopName);
+
+        this.setState({ productData, 
+            lowestPricePerUnit: data.pricePerUnit, 
+            lowestShopId: data.shopId, 
+            lowestShopName: data.shopName
+        });
+      })
+      .catch(error => {
+        console.log(error)
+      }
+    );
   }
 
   render() {
@@ -41,6 +92,10 @@ class ProductComponent extends React.Component {
         <td>{this.props.productData.lowestPricePerUnit}</td>
         <td>{this.props.productData.quantity}</td>
         <td>{this.props.productData.defaultMeasuring}</td>
+        {/* <td>{this.state.productData.name}</td>
+        <td>{this.state.productData.lowestPricePerUnit}</td>
+        <td>{this.state.productData.quantity}</td>
+        <td>{this.state.productData.defaultMeasuring}</td> */}
         <td>{productCost}</td>
       </tr>
     );
