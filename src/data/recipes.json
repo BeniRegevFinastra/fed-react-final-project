@@ -19,7 +19,7 @@
             {
                 "ingredientId": 2,
                 "index": 2,
-                "name": "Tameto",
+                "name": "Tomato",
                 "units": "x",
                 "quantity": 5
             },
@@ -68,7 +68,7 @@
             {
                 "ingredientId": 8,
                 "index": 8,
-                "name": "Table Salt",
+                "name": "Kosher Salt",
                 "units": "teaspoon",
                 "quantity": 0.5
             }
@@ -149,14 +149,14 @@
             {
                 "ingredientId": 2,
                 "index": 1,
-                "name": "Tameto",
+                "name": "Tomato",
                 "units": "x",
                 "quantity": 1
             },
             {
                 "ingredientId": 10,
                 "index": 2,
-                "name": "Purple Onion",
+                "name": "Red (Purple) Onion",
                 "units": "x",
                 "quantity": 1
             },
@@ -177,7 +177,7 @@
             {
                 "ingredientId": 12,
                 "index": 5,
-                "name": "Black Olives Sliced",
+                "name": "Kalamata (Black) Olives Sliced",
                 "units": "gr",
                 "quantity": 50
             },
@@ -211,7 +211,7 @@
             {
                 "ingredientId": 2,
                 "index": 2,
-                "name": "Tameto",
+                "name": "Tomato",
                 "units": "x",
                 "quantity": 5
             },
@@ -260,7 +260,7 @@
             {
                 "ingredientId": 8,
                 "index": 8,
-                "name": "Table Salt",
+                "name": "Kosher Salt",
                 "units": "teaspoon",
                 "quantity": 0.5
             }
@@ -341,14 +341,14 @@
             {
                 "ingredientId": 2,
                 "index": 1,
-                "name": "Tameto",
+                "name": "Tomato",
                 "units": "x",
                 "quantity": 1
             },
             {
                 "ingredientId": 10,
                 "index": 2,
-                "name": "Purple Onion",
+                "name": "Red (Purple) Onion",
                 "units": "x",
                 "quantity": 1
             },
@@ -369,7 +369,7 @@
             {
                 "ingredientId": 12,
                 "index": 5,
-                "name": "Black Olives Sliced",
+                "name": "Kalamata (Black) Olives Sliced",
                 "units": "gr",
                 "quantity": 50
             },
@@ -415,7 +415,7 @@
             {
                 "ingredientId": 2,
                 "index": 2,
-                "name": "Tameto",
+                "name": "Tomato",
                 "units": "x",
                 "quantity": 5
             },
@@ -464,7 +464,7 @@
             {
                 "ingredientId": 8,
                 "index": 8,
-                "name": "Table Salt",
+                "name": "Kosher Salt",
                 "units": "teaspoon",
                 "quantity": 0.5
             }
@@ -545,14 +545,14 @@
             {
                 "ingredientId": 2,
                 "index": 1,
-                "name": "Tameto",
+                "name": "Tomato",
                 "units": "x",
                 "quantity": 1
             },
             {
                 "ingredientId": 10,
                 "index": 2,
-                "name": "Purple Onion",
+                "name": "Red (Purple) Onion",
                 "units": "x",
                 "quantity": 1
             },
@@ -573,7 +573,7 @@
             {
                 "ingredientId": 12,
                 "index": 5,
-                "name": "Black Olives Sliced",
+                "name": "Kalamata (Black) Olives Sliced",
                 "units": "gr",
                 "quantity": 50
             },
@@ -607,7 +607,7 @@
             {
                 "ingredientId": 2,
                 "index": 2,
-                "name": "Tameto",
+                "name": "Tomato",
                 "units": "x",
                 "quantity": 5
             },
@@ -656,7 +656,7 @@
             {
                 "ingredientId": 8,
                 "index": 8,
-                "name": "Table Salt",
+                "name": "Kosher Salt",
                 "units": "teaspoon",
                 "quantity": 0.5
             }
@@ -737,14 +737,14 @@
             {
                 "ingredientId": 2,
                 "index": 1,
-                "name": "Tameto",
+                "name": "Tomato",
                 "units": "x",
                 "quantity": 1
             },
             {
                 "ingredientId": 10,
                 "index": 2,
-                "name": "Purple Onion",
+                "name": "Red (Purple) Onion",
                 "units": "x",
                 "quantity": 1
             },
@@ -765,7 +765,7 @@
             {
                 "ingredientId": 12,
                 "index": 5,
-                "name": "Black Olives Sliced",
+                "name": "Kalamata (Black) Olives Sliced",
                 "units": "gr",
                 "quantity": 50
             },

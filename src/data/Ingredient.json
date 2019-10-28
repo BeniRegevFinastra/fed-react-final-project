@@ -2,6 +2,7 @@
     {
       "id": 1,
       "name": "Egg",
+      "imageUrl": "https://5.imimg.com/data5/NC/UD/MY-68350052/fresho-fresh-white-eggs-500x500.jpg",
       "defaultMeasuring": "unit",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -10,7 +11,8 @@
     },
     {
       "id": 2,
-      "name": "Tameto",
+      "name": "Tomato",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/Red_Tomatoes_with_PLU_code.jpg",
       "defaultMeasuring": "unit",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -20,6 +22,7 @@
     {
       "id": 3,
       "name": "Onion",
+      "imageUrl": "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_09de6fa2-0789-4da5-a882-027d454f7b45.jpg",
       "defaultMeasuring": "unit",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -29,6 +32,7 @@
     {
       "id": 4,
       "name": "Garlic",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Garlic_Press_and_Garlic.jpg",
       "defaultMeasuring": "head",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -38,6 +42,7 @@
     {
       "id": 5,
       "name": "Sweet Paprica Power",
+      "imageUrl": "https://www.savoryspiceshop.com/content/mercury_modules/cart/items/2/8/5/2859/paprika-smoked-spanish-sweet-1.jpg",
       "defaultMeasuring": "tablespoon",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -47,6 +52,7 @@
     {
       "id": 6,
       "name": "Hot Paprica Powder",
+      "imageUrl": "https://www.savoryspiceshop.com/content/mercury_modules/cart/items/2/8/5/2858/paprika-smoked-spanish-hot-1.jpg",
       "defaultMeasuring": "teaspoon",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -56,6 +62,7 @@
     {
       "id": 7,
       "name": "White Pepper Powder",
+      "imageUrl": "http://cdn.shopify.com/s/files/1/2014/5589/products/White_Pepper_Powder_grande.jpg?v=1509010494",
       "defaultMeasuring": "teaspoon",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -64,7 +71,8 @@
     },
     {
       "id": 8,
-      "name": "Table Salt",
+      "name": "Kosher Salt",
+      "imageUrl": "https://cdnimg.webstaurantstore.com/images/products/large/446038/1710852.jpg",
       "defaultMeasuring": "teaspoon",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -74,6 +82,7 @@
     {
       "id": 9,
       "name": "Black Pepper Powder",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Spilled_Pepper.jpg",
       "defaultMeasuring": "teaspoon",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -82,7 +91,8 @@
     },
     {
       "id": 10,
-      "name": "Purple Onion",
+      "name": "Red (Purple) Onion",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Red_Onion_on_White.JPG",
       "defaultMeasuring": "unit",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -92,6 +102,7 @@
     {
       "id": 11,
       "name": "Slaty Cheese",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/White_brine_cheese_2.jpg",
       "defaultMeasuring": "gr",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -100,7 +111,8 @@
     },
     {
       "id": 12,
-      "name": "Black Olives Sliced",
+      "name": "Kalamata (Black) Olives Sliced",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Olives_in_bowl.jpg/440px-Olives_in_bowl.jpg",
       "defaultMeasuring": "gr",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -110,6 +122,7 @@
     {
       "id": 13,
       "name": "Yogurt",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Cacik-1.jpg/800px-Cacik-1.jpg",
       "defaultMeasuring": "cup",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -117,8 +130,10 @@
       "lowestPriceShopName": null
     },
     {
+      
       "id": 14,
-      "name": "Hering Fish Thin Sliced",
+      "name": "Hering Fish Fillet Thin Sliced",
+      "imageUrl": "https://www.eatdrinkbreathe.com/wp-content/uploads/2013/02/IMG_1469.jpg",
       "defaultMeasuring": "gr",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -128,6 +143,7 @@
     {
       "id": 15,
       "name": "Pateto",
+      "imageUrl": "https://yt3.ggpht.com/a-/AN66SAz6_oL-VfdO7c-x6gbH6I-PXCIXuiQZTD2ljg=s900-mo-c-c0xffffffff-rj-k-no",
       "defaultMeasuring": "unit",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -137,6 +153,7 @@
     {
       "id": 16,
       "name": "Beans",
+      "imageUrl": "https://www.simplyrecipes.com/wp-content/uploads/2017/01/2017-01-17-PressureCookerBeans-5-768x1075.jpg",
       "defaultMeasuring": "gr",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -146,6 +163,7 @@
     {
       "id": 17,
       "name": "Picked Cabage",
+      "imageUrl": "https://recipes.timesofindia.com/thumb/53844625.cms?imgsize=155533&width=800&height=800",
       "defaultMeasuring": "gr",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -155,6 +173,7 @@
     {
       "id": 18,
       "name": "Bitroot",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0274/3481/articles/LYOFOOD-freeze-dried-organic-beetroot-powders-EU-01.jpg?v=1490710701",
       "defaultMeasuring": "unit",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -163,7 +182,8 @@
     },
     {
       "id": 19,
-      "name": "Mayonese",
+      "name": "Mayonnaise",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Mayonnaise_%281%29.jpg",
       "defaultMeasuring": "tablespoon",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -172,7 +192,8 @@
     },
     {
       "id": 20,
-      "name": "ChickBeans",
+      "name": "Chickpea Seeds",
+      "imageUrl": "https://i.etsystatic.com/7575002/r/il/78563f/540835874/il_1588xN.540835874_sev8.jpg",
       "defaultMeasuring": "gr",
       "quantity": null,
       "lowestPricePerUnit": null,
@@ -182,6 +203,7 @@
     {
         "id": 21,
         "name": "Parsley",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Petroselinum.jpg",
         "defaultMeasuring": "gr",
         "quantity": null,
         "lowestPricePerUnit": null,
@@ -191,6 +213,7 @@
     {
         "id": 22,
         "name": "Cumin Powder",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/4622_-_Cumino_al_mercato_di_Ortigia%2C_Siracusa_-_Foto_Giovanni_Dall%27Orto%2C_20_marzo_2014.jpg",
         "defaultMeasuring": "teaspoon",
         "quantity": null,
         "lowestPricePerUnit": null,
@@ -200,6 +223,7 @@
     {
         "id": 23,
         "name": "Water",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Brindis_%2824675281395%29.jpg",
         "defaultMeasuring": "cup",
         "quantity": null,
         "lowestPricePerUnit": null,
