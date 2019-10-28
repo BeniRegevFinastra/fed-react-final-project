@@ -1,12 +1,20 @@
 import React from "react";
-import { Jumbotron, Button, Container } from "react-bootstrap";
+import { Jumbotron, Container } from "react-bootstrap";
+import { Button } from "reactstrap";
 import RecipesNavbar from "../components/RecipesNavbar";
 import { Redirect } from "react-router-dom";
+import axios from "axios";
 
 class ShoppingListPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      productId: null,
+      pricePerUnit: null,
+      shopId: "",
+      shopName: "",
+      measuringUnits: ""
+    };
   }
 
   componentDidMount() {
@@ -18,7 +26,7 @@ class ShoppingListPage extends React.Component {
     userRecipes.map(recipe => {
       if (recipe.ingredients.length > 0) {
         //    Scan each recipe-ingredients to find in ingredients array
-        for (let i = 0; i < recipe.ingredients.lenght; i++) {
+        for (let i = 0; i < recipe.ingredients.length; i++) {
           for (let j = 0; j < productsForShopping.length; j++) {
             if (
               productsForShopping[j].id === recipe.ingredients[i].id ||
@@ -43,7 +51,84 @@ class ShoppingListPage extends React.Component {
         }
       }
     });
-    let productsForShopping;
+    //  Filter out products that are not in any recipe
+    productsForShopping = productsForShopping.filter(
+      product => product.quantity !== null
+    );
+
+    //  Get lowest price and shop-details from price-compare API
+    // productsForShopping.map(product => {
+    // });
+    const sampleShopProduct1 = {
+      id: 1,
+      name: "Egg",
+      defaultMeasuring: "unit",
+      quantity: null,
+      lowestPricePerUnit: null,
+      lowestPriceStopId: null,
+      lowestPriceShopName: null
+    };
+    this.getProductLowestPrice(sampleShopProduct1);
+    console.log("sampleShopProduct1 returned (should be successful)");
+    const sampleShopProduct7 = {
+      id: 7,
+      index: 7,
+      name: "White Pepper Powder",
+      defaultMeasuring: "teaspoon",
+      quantity: null,
+      lowestPricePerUnit: null,
+      lowestPriceStopId: null,
+      lowestPriceShopName: null
+    };
+    this.getProductLowestPrice(sampleShopProduct7);
+    console.log(
+      "sampleShopProduct7 returned (should have FAILED with HTTPStatusCode 404 NOT FOUND)!"
+    );
+  }
+
+  getProductLowestPrice(shopProduct) {
+    let {
+      productName,
+      pricePerUnit,
+      shopId,
+      shopName,
+      measuringUnits
+    } = this.state;
+    let productId = shopProduct.id;
+    let apiGetProductLowestPriceURL = `http://localhost:8080/shopProduct/getLowestPrice/product/${productId}`;
+    axios.get(apiGetProductLowestPriceURL).then(res => {
+      const { data, status, statusText } = res;
+      if (status >= 200 && status <= 299) {
+        productName = data.productName;
+        shopId = data.shopId;
+        shopName = data.shopName;
+        measuringUnits = data.measuringUnits;
+        pricePerUnit = data.pricePerUnit;
+
+        console.log(
+          'ShopProduct = { id: "' +
+            data.id +
+            '", productId: "' +
+            data.productId +
+            '", productName: "' +
+            data.productName +
+            '", shopId: "' +
+            data.shopId +
+            '", shopName: "' +
+            data.shopName +
+            '", defaultMeasuring: "' +
+            data.defaultMeasuring +
+            '", pricePerUnit: ' +
+            data.pricePerUnit +
+            " }"
+        );
+      } else {
+        console.log("HTTP StatusCode is " + status + ", " + statusText);
+      }
+
+      this.setState({ productId, productName, shopId, shopName, pricePerUnit });
+      console.log("ShoppingListPage.getProductLowestPrice(shopProduct) -- End");
+    });
   }
 
   render() {
@@ -57,14 +142,19 @@ class ShoppingListPage extends React.Component {
       <div>
         <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout} />
         <Jumbotron>
-          <Container>
+          <Container id="dinner-title">
             <h1 className="display-3">Your Shopping List For Dinner</h1>
-            <p>
-              You are now browsing as a Guest, You can
-              <Button variant="primary" href="#/login">
-                Login
+            <h6>
+              The products in the shopping list are the ingredients extracted
+              from the recipes you selected for dinner.
+            </h6>
+            <h6>
+              Here you can set quantity of each recipe, to change your selection
+              of recipes for dinner go to
+              <Button color="link" href="#recipes">
+                Recipes Page.
               </Button>
-            </p>
+            </h6>
           </Container>
         </Jumbotron>
       </div>
