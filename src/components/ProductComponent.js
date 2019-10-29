@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Button } from "reactstrap";
 
 class ProductComponent extends React.Component {
   /*  productData: {
@@ -16,70 +17,78 @@ class ProductComponent extends React.Component {
     super(props);
     this.state = {
       productData: null,
-      lowestPricePerUnit: null,
-      lowestShopId: null,
-      lowestShopName: null,
+      quantityValue: 0,
+      lowestPricePerUnit: 0.0,
+      lowestPriceShopId: -1,
+      lowestPriceShopName: "Product Not Found in PriceApp",
       navigateToProductId: null,
+      isLoading: true,
     };
-    // this.openProductDetails = this.openProductDetails.bind(this);
+    this.quantityIncrease = this.quantityIncrease.bind(this);
+    this.quantityDecrease = this.quantityDecrease.bind(this);
     // this.addRemoveFromShoppingList = this.addRemoveFromShoppingList.bind(this);
+    // this.openProductDetails = this.openProductDetails.bind(this);
   }
 
   componentDidMount() {
     const { productData } = this.props;
+    console.log("componentDidMount() -- productData.id=" + productData.id);
     const productId = this.props.productData.id;
-    let apiGetProductLowestPriceURL = `http://localhost:8080/shopProduct/getLowestPrice/product/${productId}`;
-    axios.get(apiGetProductLowestPriceURL).then(response => {
-        const { status, statusText, data } = response;
-        console.log("status=" + status + "; statusText=" + statusText);
-        /*  data = ShopProduct = {
-              "id": "3",
-              "shopId": "3",
-              "shopName": "",
-              "productId": "1",
-              "productName": "",
-              "pricePerUnit": 11.30,
-              "measuringUnits": "box"
-            } 
-        */
-        productData.lowestPricePerUnit = data.pricePerUnit;
-        productData.lowestShopId = data.shopId;
-        productData.lowestShopName = data.shopName;
-        console.log("componentDidMount() -- id=" + productId + 
-                    " ; lowestPricePerUnit=" + data.pricePerUnit + 
-                    " ; lowestShopId=" + data.shopId + 
-                    " ; lowestShopName=" + data.shopName);
+    this.setState({ quantityValue: productData.quantity });
 
-        this.setState({ productData, 
-            lowestPricePerUnit: data.pricePerUnit, 
-            lowestShopId: data.shopId, 
-            lowestShopName: data.shopName
-        });
-      })
-      .catch(error => {
-        console.log(error)
+    let { lowestPriceShopId, lowestPriceShopName, lowestPricePerUnit } = this.state;
+    const { responses } = this.props;
+    if (responses.length > 0) {
+      const resData = responses.find(
+        r => parseInt(r.productId) === this.props.productData.id
+      );
+      if (resData !== undefined) {
+        lowestPriceShopId = resData.shopId;
+        lowestPriceShopName = resData.shopName;
+        lowestPricePerUnit = resData.pricePerUnit;
+        this.setState({ lowestPriceShopId, lowestPriceShopName, lowestPricePerUnit });
       }
-    );
+    }
+    this.setState({ isLoading: false });
+  }
+
+  quantityIncrease() {
+    this.setState({ quantityValue: this.state.quantityValue + 1 });
+  }
+
+  quantityDecrease() {
+    if (this.state.quantityValue > 0) {
+      this.setState({ quantityValue: this.state.quantityValue - 1 });
+    }
   }
 
   render() {
-    /*  {
-          "id": 1,
-          "name": "Egg",
-          "imageUrl": "https://5.imimg.com/data5/NC/UD/MY-68350052/fresho-fresh-white-eggs-500x500.jpg",
-          "defaultMeasuring": "unit",
-          "quantity": null,
-          "lowestPricePerUnit": null,
-          "lowestPriceStopId": null,
-          "lowestPriceShopName": null
-        } */
+    if (this.state.isLoading) {
+      return <p>Loading Product(s)...</p>;
+    }
+
+    let { lowestPriceShopId, lowestPriceShopName, lowestPricePerUnit } = this.state;
+    const { responses } = this.props;
+    if (responses.length > 0) {
+      const resData = responses.find(
+        r => parseInt(r.productId) === this.props.productData.id
+      );
+      if (resData !== undefined) {
+        lowestPriceShopId = resData.shopId;
+        lowestPriceShopName = resData.shopName;
+        lowestPricePerUnit = resData.pricePerUnit;
+        // this.setState({ lowestPriceShopId, lowestPriceShopName, lowestPricePerUnit });
+      }
+    }
+
     const productCost =
-      (this.props.productData.lowestPricePerUnit !== null
-        ? this.props.productData.lowestPricePerUnit
+      (lowestPricePerUnit !== null
+        ? lowestPricePerUnit
         : 0) *
       (this.props.productData.quantity !== null
         ? this.props.productData.quantity
         : 0);
+
     return (
       <tr onClick={this.openProductDetails}>
         <td>
@@ -89,14 +98,34 @@ class ProductComponent extends React.Component {
           <img height="50px" src={this.props.productData.imageUrl} alt=""></img>
         </td>
         <td>{this.props.productData.name}</td>
-        <td>{this.props.productData.lowestPricePerUnit}</td>
-        <td>{this.props.productData.quantity}</td>
+        <td>$ {lowestPricePerUnit}</td>
+        <td>
+          {/* <Button color="primary" onClick={this.quantityDecrease}>
+            -
+          </Button>
+          {this.props.productData.quantity}
+          <Button color="primary" onClick={this.quantityIncrease}>
+            +
+          </Button> */}
+          <div className="def-number-input number-input">
+            <button className="minus" onClick={this.quantityDecrease}></button>
+            <input
+              min="0"
+              value="1"
+              type="number"
+              name="quantity"
+              className="quantity"
+              value={this.state.quantityValue}
+              onChange={() => console.log("change")}
+            />
+            <button className="plus" onClick={this.quantityIncrease}></button>
+          </div>
+        </td>
         <td>{this.props.productData.defaultMeasuring}</td>
-        {/* <td>{this.state.productData.name}</td>
-        <td>{this.state.productData.lowestPricePerUnit}</td>
-        <td>{this.state.productData.quantity}</td>
-        <td>{this.state.productData.defaultMeasuring}</td> */}
-        <td>{productCost}</td>
+        <td>$ {productCost}</td>
+        <td>
+          ({lowestPriceShopId}) {lowestPriceShopName}
+        </td>
       </tr>
     );
   }

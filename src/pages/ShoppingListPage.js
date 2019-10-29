@@ -1,6 +1,5 @@
 import React from "react";
 import { Jumbotron, Container, Table } from "react-bootstrap";
-// import Table from 'react-bootstrap/Table'
 import { Button } from "reactstrap";
 import { Redirect } from "react-router-dom";
 import axios from "axios";
@@ -12,6 +11,7 @@ class ShoppingListPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      dataArray: [],
       productsForShopping: [],
       productId: null,
       pricePerUnit: null,
@@ -61,38 +61,28 @@ class ShoppingListPage extends React.Component {
       product => product.quantity !== null
     );
 
-    // for (let i=0; i < productsForShopping.length; i++){
-    //   this.getLowestPriceOfProduct(productsForShopping[i].id).then(shopProduct => {
-    //     console.log(shopProduct);
-    //   });
-    // }
+    for (let i = 0; i < productsForShopping.length; i++) {
+      this.getLowestPriceOfProduct(productsForShopping[i].id).then(response => {
+        /*  data = ShopProduct = {
+              "id": "3",
+              "shopId": "3",
+              "shopName": "",
+              "productId": "1",
+              "productName": "",
+              "pricePerUnit": 11.30,
+              "measuringUnits": "box"
+            } */
 
+        console.log("\t response: " + response);
+        if (response !== undefined) {
+          let { dataArray } = this.state;
+          dataArray.push(response.data);
+          this.setState({ dataArray });
+        }
+        //// const productLowestPrice = new ShopProduct (data.id, data.shopId, data.shopName, data.productId, data.productName, data.pricePerUnit, data.measuringUnits);
+      });
+    }
 
-    // const sampleShopProduct1 = {
-    //   id: 1,
-    //   name: "Egg",
-    //   measuringUnits: "unit",
-    //   quantity: null,
-    //   lowestPricePerUnit: null,
-    //   lowestPriceStopId: null,
-    //   lowestPriceShopName: null
-    // };
-    // this.getProductLowestPrice(sampleShopProduct1);
-    // console.log("sampleShopProduct1 returned (should be successful)");
-    // const sampleShopProduct7 = {
-    //   id: 7,
-    //   index: 7,
-    //   name: "White Pepper Powder",
-    //   measuringUnits: "teaspoon",
-    //   quantity: null,
-    //   lowestPricePerUnit: null,
-    //   lowestPriceStopId: null,
-    //   lowestPriceShopName: null
-    // };
-    // this.getProductLowestPrice(sampleShopProduct7);
-    // console.log(
-    //   "sampleShopProduct7 returned (should have FAILED with HTTPStatusCode 404 NOT FOUND)!"
-    // );
     this.setState({ productsForShopping });
   }
 
@@ -101,22 +91,10 @@ class ShoppingListPage extends React.Component {
     let apiGetProductLowestPriceURL = `http://localhost:8080/shopProduct/getLowestPrice/product/${productId}`;
     const response = await axios
       .get(apiGetProductLowestPriceURL)
-      .catch(error => console.log(error));
-
-    const { status, statusText, data } = response;
-    console.log("status=" + status + "; statusText=" + statusText);
-
-    /*  data = ShopProduct = {
-          "id": "3",
-          "shopId": "3",
-          "shopName": "",
-          "productId": "1",
-          "productName": "",
-          "pricePerUnit": 11.30,
-          "measuringUnits": "box"
-        } */
-    const productLowestPrice = new ShopProduct (data.id, data.shopId, data.shopName, data.productId, data.productName, data.pricePerUnit, data.measuringUnits);
-    return productLowestPrice;
+      .catch(error => {
+        console.log("async GET request: " + error);
+      });
+    return response;
   }
 
   getProductLowestPrice(shopProduct) {
@@ -138,24 +116,6 @@ class ShoppingListPage extends React.Component {
         shopName = data.shopName;
         measuringUnits = data.measuringUnits;
         pricePerUnit = data.pricePerUnit;
-
-        console.log(
-          'ShopProduct = { id: "' +
-            data.id +
-            '", productId: "' +
-            data.productId +
-            '", productName: "' +
-            data.productName +
-            '", shopId: "' +
-            data.shopId +
-            '", shopName: "' +
-            data.shopName +
-            '", measuringUnits: "' +
-            data.measuringUnits +
-            '", pricePerUnit: ' +
-            data.pricePerUnit +
-            " }"
-        );
       } else {
         console.log("HTTP StatusCode is " + status + ", " + statusText);
       }
@@ -168,6 +128,7 @@ class ShoppingListPage extends React.Component {
 
   render() {
     const { activeUser, handleLogout } = this.props;
+    const { dataArray } = this.state;
 
     if (!activeUser) {
       return <Redirect to="/" />;
@@ -177,12 +138,12 @@ class ShoppingListPage extends React.Component {
     let totalCost = 0.0;
     for (var i = 0; i < this.state.productsForShopping.length; i++) {
       let productRow = (
-        <ProductComponent productData={this.state.productsForShopping[i]} />
+        <ProductComponent productData={this.state.productsForShopping[i]} responses={dataArray} />
       );
       productRows.push(productRow);
-      totalCost +=
+      const productCost = (totalCost +=
         this.state.productsForShopping[i].quantity *
-        this.state.productsForShopping[i].lowestPricePerUnit;
+        this.state.productsForShopping[i].lowestPricePerUnit);
     }
 
     return (
@@ -210,15 +171,16 @@ class ShoppingListPage extends React.Component {
               <tr>
                 <th>Image</th>
                 <th>Product Name</th>
-                <th>Price Per Unit</th>
+                <th>Cheapest Price</th>
                 <th>Quantity</th>
                 <th>Units</th>
-                <th>Cost (price x qty)</th>
+                <th>Cost</th>
+                <th>Cheapest Shop</th>
               </tr>
             </thead>
             <tbody>{productRows}</tbody>
           </Table>
-          <h5>Total Cost: USD {totalCost} </h5>
+          {/* <h5>Total Cost: USD {totalCost} </h5> */}
         </Container>
       </div>
     );

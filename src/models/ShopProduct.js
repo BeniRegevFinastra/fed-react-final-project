@@ -11,29 +11,30 @@ class ShopProduct {
   constructor(
     idOrObj,
     shopId,
-    shopName,
     productId,
-    productName,
     pricePerUnit,
     measuringUnits
+    // ,shopName
+    // ,productName
   ) {
+    console.log("arguments.length=" + arguments.length + ", id: " + idOrObj + ", shopId: " + shopId + ", productId: " + productId);
     if (arguments.length === 1) {
       //  First and only argument is an object
       this.id = idOrObj.id;
       this.shopId = idOrObj.shopId;
-      this.shopName = idOrObj.shopName;
       this.productId = idOrObj.productId;
-      this.productName = idOrObj.productName;
       this.pricePerUnit = idOrObj.pricePerUnit;
       this.measuringUnits = idOrObj.measuringUnits;
+      // this.shopName = idOrObj.shopName;
+      // this.productName = idOrObj.productName;
     } else {
       this.id = idOrObj;
       this.shopId = shopId;
-      this.shopName = shopName;
       this.productId = productId;
-      this.productName = productName;
       this.pricePerUnit = pricePerUnit;
       this.measuringUnits = measuringUnits;
+      // this.shopName = shopName;
+      // this.productName = productName;
     }
   }
   toString() {

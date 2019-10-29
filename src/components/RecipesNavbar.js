@@ -30,7 +30,7 @@ class RecipesNavbar extends React.Component {
     }
 
     const linkSignup = !activeUser ? (
-      <Nav.Link href="#/signup">Signup</Nav.Link>
+      <Nav.Link hidden={true} href="#/signup">Signup</Nav.Link>
     ) : null;
     const linkLogin = !activeUser ? (
       <Nav.Link href="#/login">Login</Nav.Link>
