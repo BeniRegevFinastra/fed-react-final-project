@@ -20,7 +20,7 @@ class HomePage extends React.Component {
         <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout} />
         <Jumbotron>
           <Container>
-            <h1 className="display-3">Chef BEN's Recipes Application</h1>
+            <h1 className="display-3">Chef BEN's Recipes App</h1>
             <h3 className="display-7">
               You Are Invited To Master your recipes &amp; Dinner:{" "}
             </h3>

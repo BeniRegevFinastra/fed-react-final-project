@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "shopId": "1",
+    "productId": 1,
+    "shopName": "Supermarket HaYarden (Etsel) RG",
+    "productName": "",
+    "pricePerUnit": 11.33,
+    "measuringUnits": "box"
+  },
+  {
+    "id": "2",
+    "shopId": "2",
+    "productId": 1,
+    "shopName": "Supermarket HaYarden (Kesem) RG",
+    "productName": "",
+    "pricePerUnit": 11.5,
+    "measuringUnits": "box"
+  },
+  {
+    "id": "3",
+    "shopId": "3",
+    "productId": 1,
+    "shopName": "Very Tasty Rishon Le-Tsion East",
+    "productName": "",
+    "pricePerUnit": 11.30,
+    "measuringUnits": "box"
+  },
+  {
+    "id": "4",
+    "shopId": "1",
+    "productId": 2,
+    "shopName": "Supermarket HaYarden (Etsel) RG",
+    "productName": "",
+    "pricePerUnit": 5.9,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": "5",
+    "shopId": "5",
+    "productId": 2,
+    "shopName": "Very Tasty Givatayim",
+    "productName": "",
+    "pricePerUnit": 5.91,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": "6",
+    "shopId": "7",
+    "productId": 2,
+    "shopName": "Very Tasty Atidim TAY",
+    "productName": "",
+    "pricePerUnit": 5.88,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": "7",
+    "shopId": "4",
+    "productId": 3,
+    "shopName": "Very Tasty Rishon Le-Tsion West",
+    "productName": "",
+    "pricePerUnit": 8.76,
+    "measuringUnits": "gr"
+  },
+  {
+    "id": "8",
+    "shopId": "9",
+    "productId": 3,
+    "shopName": "Refael Cohen Atidim TAY",
+    "productName": "",
+    "pricePerUnit": 12.34,
+    "measuringUnits": "gr"
+  },
+  {
+    "id": "9",
+    "shopId": "11",
+    "productId": 13,
+    "shopName": "Victoria Shopping Center Hertsel RG",
+    "productName": "",
+    "pricePerUnit": 49.50,
+    "measuringUnits": "gr"
+  },
+  {
+    "id": "10",
+    "shopId": "10",
+    "productId": 12,
+    "shopName": "Makolet Itsik Negba RG",
+    "productName": "",
+    "pricePerUnit": 6.9,
+    "measuringUnits": "gr"
+  },
+  {
+    "id": "11",
+    "shopId": "13",
+    "productId": 15,
+    "shopName": "Small House Wines Airport City Lod",
+    "productName": "",
+    "pricePerUnit": 7.75,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": "12",
+    "shopId": "13",
+    "productId": 12,
+    "shopName": "Small House Wines Airport City Lod",
+    "productName": "",
+    "pricePerUnit": 6.95,
+    "measuringUnits": "gr"
+  }
+]

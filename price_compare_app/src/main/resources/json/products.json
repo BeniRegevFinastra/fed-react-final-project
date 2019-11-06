@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "name": "Egg",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "box"
+  },
+  {
+    "id": 2,
+    "name": "Tameto",
+    "pricePerUnit": 5.9,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 3,
+    "name": "Onion",
+    "pricePerUnit": 4.95,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 4,
+    "name": "Garlic",
+    "pricePerUnit": 8.9,
+    "measuringUnits": "pkg"
+  },
+  {
+    "id": 5,
+    "name": "Sweet Paprika Power",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 6,
+    "name": "Hot Paprika Powder",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 7,
+    "name": "White Pepper Powder",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 8,
+    "name": "Table Salt",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 9,
+    "name": "Black Pepper Powder",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 10,
+    "name": "Purple Onion",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 11,
+    "name": "Salty Cheese",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "gr"
+  },
+  {
+    "id": 12,
+    "name": "Black Olives Sliced",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "box"
+  },
+  {
+    "id": 13,
+    "name": "Yogurt",
+    "pricePerUnit": 2.50,
+    "measuringUnits": "cup"
+  },
+  {
+    "id": 14,
+    "name": "Herring Fish Thin Sliced",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 15,
+    "name": "Pateto",
+    "pricePerUnit": 7.75,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 16,
+    "name": "Beans",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 17,
+    "name": "Picked Cabage",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 18,
+    "name": "Bitroot",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 19,
+    "name": "Mayonese",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "jar"
+  },
+  {
+    "id": 20,
+    "name": "Chick Beans",
+    "pricePerUnit": 19.5,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 21,
+    "name": "Parsley",
+    "pricePerUnit": 5.95,
+    "measuringUnits": "pkg"
+  },
+  {
+    "id": 22,
+    "name": "Cumin Powder",
+    "pricePerUnit": 40.725,
+    "measuringUnits": "kg"
+  },
+  {
+    "id": 23,
+    "name": "Water",
+    "pricePerUnit": 6.0,
+    "measuringUnits": "lt"
+  }
+]
